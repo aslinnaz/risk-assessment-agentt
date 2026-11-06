@@ -1,0 +1,18 @@
+.env
+.venv/
+.cache/
+__pycache__/
+*.pyc
+.streamlit/secrets.toml
+.DS_Store
+.pytest_cache/
+.env.*
+!.env.example
+# source documents (distribution permission not verified) and generated output
+sources/*
+!sources/README.md
+*.pdf
+*.docx
+*.zip
+reports/
+outputs/

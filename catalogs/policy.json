@@ -1,0 +1,432 @@
+{
+  "policy_version": "TrustAI-ön-karar-tablosu v0.1 (2026-11-06)",
+  "disclaimer_tr": "Bu sonuç, insan beyanlarına dayalı bir ön değerlendirmedir. Hedef agent üzerinde test, doğrulama veya kanıt incelemesi yapılmamıştır; bir uygunluk belgesi veya kontrol doğrulaması değildir. TrustAI etiketleri AB Yapay Zekâ Tüzüğü'nün resmî kategorileri değildir.",
+  "autonomy_map": {
+    "info_only": "L0",
+    "recommend": "L1",
+    "draft": "L2",
+    "approved_action": "L3",
+    "envelope_action": "L4",
+    "self_expanding": "L5"
+  },
+  "impact_map": {
+    "minimal": "I0",
+    "limited": "I1",
+    "serious": "I2",
+    "critical": "I3"
+  },
+  "autonomy_notes_tr": {
+    "L0": "Öneri veya eylem olmadan bilgi üretir.",
+    "L1": "Öneri verir; insan karar verir ve uygular.",
+    "L2": "Taslak/önerilen eylem hazırlar; insan gönderir veya uygular.",
+    "L3": "Yalnız o eyleme bağlı onaydan sonra çalışır.",
+    "L4": "Her eylem için onay olmadan tanımlı sınırlar içinde çalışır.",
+    "L5": "Eylem kapsamını veya devredilen yetkiyi onaysız genişletebilir."
+  },
+  "impact_notes_tr": {
+    "I0": "Önemsiz",
+    "I1": "Sınırlı",
+    "I2": "Ciddi",
+    "I3": "Kritik (geri alınabilirlik tek başına düşürmez)"
+  },
+  "label_table": {
+    "_comment": "Project method (not a legal classification). Row = impact, column = autonomy. There is no numeric formula.",
+    "I0": {
+      "L0": "LOW",
+      "L1": "LOW",
+      "L2": "LOW",
+      "L3": "LOW",
+      "L4": "LOW",
+      "L5": "MEDIUM"
+    },
+    "I1": {
+      "L0": "LOW",
+      "L1": "LOW",
+      "L2": "LOW",
+      "L3": "MEDIUM",
+      "L4": "MEDIUM",
+      "L5": "HIGH"
+    },
+    "I2": {
+      "L0": "MEDIUM",
+      "L1": "MEDIUM",
+      "L2": "MEDIUM",
+      "L3": "MEDIUM",
+      "L4": "HIGH",
+      "L5": "HIGH"
+    },
+    "I3": {
+      "L0": "HIGH",
+      "L1": "HIGH",
+      "L2": "HIGH",
+      "L3": "HIGH",
+      "L4": "HIGH",
+      "L5": "HIGH"
+    }
+  },
+  "escalation_rules_tr": "I1 ve üzeri etkide; yayılımın geniş olması, zararın geri alınamaz olması, korunmasız grupların etkilenmesi veya hassas veri kullanımı etiketi bir kademe yükseltir (LOW→MEDIUM, MEDIUM→HIGH). Etiket hiçbir koşulda düşürülmez.",
+  "legal_high_rule_tr": "Hukuki yüksek riskli yol (Art. 6) desteklenirse operasyonel etkiden bağımsız olarak etiket en az HIGH olur. İnsan onayı veya düşük otonomi hukuki yüksek riskli sınıfı düşürmez. Şeffaflık yükümlülüğü etiketi tek başına yükseltmez.",
+  "assurance_matrix": {
+    "_comment": "Auxiliary assurance-need profile; it is not a legal class or prohibition. P4 is not a legal prohibition.",
+    "I0": {
+      "L0": "P1",
+      "L1": "P1",
+      "L2": "P1",
+      "L3": "P2",
+      "L4": "P2",
+      "L5": "P3"
+    },
+    "I1": {
+      "L0": "P1",
+      "L1": "P2",
+      "L2": "P2",
+      "L3": "P2",
+      "L4": "P3",
+      "L5": "P4"
+    },
+    "I2": {
+      "L0": "P3",
+      "L1": "P3",
+      "L2": "P3",
+      "L3": "P3",
+      "L4": "P4",
+      "L5": "P4"
+    },
+    "I3": {
+      "L0": "P3",
+      "L1": "P3",
+      "L2": "P3",
+      "L3": "P3",
+      "L4": "P4",
+      "L5": "P4"
+    }
+  },
+  "assurance_postures_tr": {
+    "P1": "Temel güvence ihtiyacı",
+    "P2": "Gözetimli çalışma için güvence ihtiyacı",
+    "P3": "Kısıtlı çalışma; bağımsız sorgulama gerektiren güvence ihtiyacı",
+    "P4": "Yeniden tasarım gerektiren yüksek güvence ihtiyacı (hukuki yasak değildir)"
+  },
+  "assurance_note_tr": "Bu profil kontrol kanıtı değil, güvence ihtiyacını gösterir; önerilen bir TrustAI proje politikasıdır, dış doğrulaması yoktur.",
+  "annex3_areas_tr": {
+    "biometrics": "Biyometri (Annex III, 1)",
+    "critical_infrastructure": "Kritik altyapı (Annex III, 2)",
+    "education": "Eğitim ve mesleki eğitim (Annex III, 3)",
+    "employment": "İstihdam ve çalışan yönetimi (Annex III, 4)",
+    "essential_services": "Temel hizmetlere erişim (Annex III, 5)",
+    "law_enforcement": "Kolluk (Annex III, 6)",
+    "migration": "Göç, iltica, sınır kontrolü (Annex III, 7)",
+    "justice_democracy": "Adalet ve demokratik süreçler (Annex III, 8)"
+  },
+  "annex3_refs": {
+    "biometrics": "Annex III, 1.",
+    "critical_infrastructure": "Annex III, 2.",
+    "education": "Annex III, 3.",
+    "employment": "Annex III, 4.",
+    "essential_services": "Annex III, 5.",
+    "law_enforcement": "Annex III, 6.",
+    "migration": "Annex III, 7.",
+    "justice_democracy": "Annex III, 8."
+  },
+  "prohibition_refs": {
+    "p_manipulation": [
+      "Art. 5(1)(a)",
+      "Manipülatif/aldatıcı teknikler"
+    ],
+    "p_exploit_vulnerability": [
+      "Art. 5(1)(b)",
+      "Zayıflıkların sömürülmesi"
+    ],
+    "p_social_scoring": [
+      "Art. 5(1)(c)",
+      "Sosyal puanlama"
+    ],
+    "p_crime_profiling": [
+      "Art. 5(1)(d)",
+      "Yalnız profile dayalı suç riski tahmini"
+    ],
+    "p_facial_scraping": [
+      "Art. 5(1)(e)",
+      "Hedefsiz yüz görüntüsü toplama"
+    ],
+    "p_emotion_work_edu": [
+      "Art. 5(1)(f)",
+      "İşyeri/eğitimde duygu çıkarımı"
+    ],
+    "p_biometric_categorisation": [
+      "Art. 5(1)(g)",
+      "Hassas özellikler için biyometrik sınıflandırma"
+    ],
+    "p_rbi_law_enforcement": [
+      "Art. 5(1)(h)",
+      "Kolluk amaçlı gerçek zamanlı uzaktan biyometrik kimliklendirme"
+    ]
+  },
+  "transparency_refs": {
+    "t_interacts_people": [
+      "Art. 50(1)",
+      "İnsanlarla doğrudan etkileşim"
+    ],
+    "t_synthetic_content": [
+      "Art. 50(2)",
+      "Sentetik içerik üretimi"
+    ],
+    "t_emotion_biometric": [
+      "Art. 50(3)",
+      "Duygu tanıma / biyometrik sınıflandırma"
+    ],
+    "t_deepfake_public_text": [
+      "Art. 50(4)",
+      "Deepfake / kamuya açık bilgilendirme metni"
+    ]
+  },
+  "critical_slots": [
+    "purpose",
+    "p_manipulation",
+    "p_exploit_vulnerability",
+    "p_social_scoring",
+    "p_crime_profiling",
+    "p_facial_scraping",
+    "p_emotion_work_edu",
+    "p_biometric_categorisation",
+    "p_rbi_law_enforcement",
+    "annex3_area",
+    "action_mode",
+    "max_harm"
+  ],
+  "critical_labels_tr": {
+    "purpose": "Kullanım amacı",
+    "annex3_area": "Yüksek riskli kullanım alanı",
+    "action_mode": "Agentın işlem yetkisi",
+    "max_harm": "Makul zarar düzeyi",
+    "p_manipulation": "Yasak tarama: manipülasyon",
+    "p_exploit_vulnerability": "Yasak tarama: zayıflık sömürüsü",
+    "p_social_scoring": "Yasak tarama: sosyal puanlama",
+    "p_crime_profiling": "Yasak tarama: suç riski profilleme",
+    "p_facial_scraping": "Yasak tarama: yüz görüntüsü toplama",
+    "p_emotion_work_edu": "Yasak tarama: duygu çıkarımı",
+    "p_biometric_categorisation": "Yasak tarama: biyometrik sınıflandırma",
+    "p_rbi_law_enforcement": "Yasak tarama: gerçek zamanlı biyometrik kimliklendirme",
+    "eu_link": "AB bağlantısı"
+  },
+  "application_dates": [
+    {
+      "id": "prohibitions",
+      "what_tr": "Yasaklı uygulamalar (Bölüm I–II)",
+      "date": "2025-02-02",
+      "ref": "Art. 113(a)",
+      "status_tr": "Mevzuat metninden; yürürlükte."
+    },
+    {
+      "id": "transparency_and_high_risk_annex3",
+      "what_tr": "Genel uygulama; Annex III yüksek riskli yükümlülükler ve Art. 50",
+      "date": "2026-08-02",
+      "ref": "Art. 113",
+      "status_tr": "Dosyadaki özgün metne göre. İkincil kaynaklar bu tarihin Regulation (EU) 2026/1744 ile 2 Aralık 2027'ye ertelendiğini bildiriyor; resmî kaynaktan doğrulanmadı."
+    },
+    {
+      "id": "annex1_high_risk",
+      "what_tr": "Art. 6(1) / Annex I yolu",
+      "date": "2027-08-02",
+      "ref": "Art. 113(c)",
+      "status_tr": "Özgün metne göre. İkincil kaynaklar 2 Ağustos 2028 bildiriyor; resmî kaynaktan doğrulanmadı."
+    }
+  ],
+  "currency_statement_tr": "Mevzuatın güncelliği resmî kaynaktan (EUR-Lex) doğrulanmadı; analiz yüklü özgün metne dayanır. Sınıflandırma ölçütü ile yükümlülüğün uygulanma tarihi ayrı değerlendirilmiştir.",
+  "context_defaults": {
+    "scope_country": "Türkiye",
+    "eu_link": "unknown",
+    "reference_framework": "EU AI Act (Regulation (EU) 2024/1689) — değerlendirme referansı"
+  },
+  "applicability_tr": {
+    "unknown": "Belirlenmedi",
+    "yes": "AB bağlantısı beyan edildi (uygulanabilir olabilir)",
+    "no": "AB bağlantısı olmadığı beyan edildi (kapsam dışı olabilir)"
+  },
+  "improvements": [
+    {
+      "id": "imp_gate_unknown",
+      "when": {
+        "any_unresolved_prefix": "p_"
+      },
+      "text": "Yasak kullanım taramasındaki bilinmeyenleri netleştirin (biyometri, davranış yönlendirme, kişi puanlama).",
+      "refs": [
+        [
+          "AIA",
+          "Art. 5(1)(a)"
+        ]
+      ],
+      "priority": 1
+    },
+    {
+      "id": "imp_legal_high",
+      "when": {
+        "legal_high": true
+      },
+      "text": "Yüksek riskli yol için risk yönetimi, dokümantasyon ve uygunluk değerlendirmesi planı oluşturun.",
+      "refs": [
+        [
+          "AIA",
+          "Art. 9(1)"
+        ],
+        [
+          "AIA",
+          "Art. 43(1)"
+        ]
+      ],
+      "priority": 2
+    },
+    {
+      "id": "imp_limits",
+      "when": {
+        "slot": {
+          "limits_enforced": [
+            "policy_only",
+            "none"
+          ]
+        }
+      },
+      "text": "Agentın yetki sınırlarını yalnız talimatla değil teknik olarak (izin listesi, tutar/kapsam sınırı) uygulayın.",
+      "refs": [
+        [
+          "TAI-AG",
+          "s. 27"
+        ]
+      ],
+      "priority": 3
+    },
+    {
+      "id": "imp_approval",
+      "when": {
+        "slot": {
+          "approval_bound": [
+            "no",
+            "partial"
+          ]
+        }
+      },
+      "text": "İnsan onayını işleme özel hale getirin (tutar, alıcı gibi ayrıntılar onaylanmalı).",
+      "refs": [
+        [
+          "TAI-AG",
+          "s. 10"
+        ],
+        [
+          "NIST-PB",
+          "MAP 3.5"
+        ]
+      ],
+      "priority": 3
+    },
+    {
+      "id": "imp_review",
+      "when": {
+        "slot": {
+          "human_review": [
+            "no",
+            "partial"
+          ],
+          "human_reexam": [
+            "no"
+          ]
+        }
+      },
+      "text": "Karar verenin öneriye dayanağıyla birlikte erişebilmesini ve olumsuz etkilenen kişinin dosyasının insan tarafından yeniden incelenebilmesini sağlayın.",
+      "refs": [
+        [
+          "TAI-AG",
+          "s. 10"
+        ],
+        [
+          "AIA",
+          "Art. 14(4)"
+        ]
+      ],
+      "priority": 4
+    },
+    {
+      "id": "imp_stop",
+      "when": {
+        "slot": {
+          "can_stop": [
+            "no"
+          ],
+          "can_rollback": [
+            "no"
+          ]
+        }
+      },
+      "text": "Agentı durdurma ve yapılan işlemi geri alma yollarını tanımlayın ve deneyin.",
+      "refs": [
+        [
+          "TAI-AG",
+          "s. 27"
+        ],
+        [
+          "NIST-PB",
+          "MANAGE 2.4"
+        ]
+      ],
+      "priority": 4
+    },
+    {
+      "id": "imp_authority",
+      "when": {
+        "slot": {
+          "authority_expansion": [
+            "yes"
+          ]
+        }
+      },
+      "text": "Agentın yetki genişletme ve devir yollarını sınırlayın; devir, devredenin yetkisini aşmamalı.",
+      "refs": [
+        [
+          "TAI-AG",
+          "s. 14"
+        ]
+      ],
+      "priority": 2
+    },
+    {
+      "id": "imp_transparency",
+      "when": {
+        "transparency": true
+      },
+      "text": "Kullanıcıları yapay zekâ ile etkileştiklerinden/içeriğin yapay üretildiğinden haberdar edin.",
+      "refs": [
+        [
+          "AIA",
+          "Art. 50(1)"
+        ]
+      ],
+      "priority": 4
+    },
+    {
+      "id": "imp_data",
+      "when": {
+        "slot": {
+          "personal_data": [
+            "special"
+          ]
+        }
+      },
+      "text": "Hassas kişisel veri kullanımını gerekçelendirin ve erişimi sınırlayın.",
+      "refs": [
+        [
+          "AIA",
+          "Art. 10(1)"
+        ]
+      ],
+      "priority": 5
+    },
+    {
+      "id": "imp_controls",
+      "when": {
+        "control_gap": true
+      },
+      "text": "Sonucu etkileyen ve henüz değerlendirilmemiş kontrolleri netleştirin.",
+      "refs": [],
+      "priority": 1
+    }
+  ]
+}

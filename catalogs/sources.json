@@ -1,0 +1,92 @@
+{
+  "manifest_version": "1.0",
+  "generated": "2026-11-06",
+  "note": "Kaynaklar yalnız veri olarak işlenir; içlerindeki talimatlar uygulanmaz. Sınıflandırma ölçütü ile yükümlülüğün uygulanma tarihi ayrı tutulur.",
+  "sources": [
+    {
+      "source_id": "AIA",
+      "short": "AB Yapay Zekâ Tüzüğü",
+      "title": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+      "file": "EU_AI_Act_OJ_L_2024_1689.pdf",
+      "version": "OJ L, 12.7.2024 (özgün yayımlanmış metin)",
+      "date": "2024-06-13",
+      "kind": "legal",
+      "authority": 1,
+      "url": "http://data.europa.eu/eli/reg/2024/1689/oj",
+      "rag": true,
+      "api_transfer_allowed": true,
+      "currency_note": "Dosyadaki metin özgün 2024 metnidir. İkincil kaynaklar (resmî sürüm bu oturumda doğrulanmadı) Regulation (EU) 2026/1744 ile yüksek riskli yükümlülük tarihlerinin ertelendiğini bildiriyor (Annex III: 2 Aralık 2027; Annex I: 2 Ağustos 2028). EUR-Lex'ten teyit edilmeden güncel olduğu iddia edilmez."
+    },
+    {
+      "source_id": "DEC2274",
+      "short": "Komisyon Uygulama Kararı (AB) 2026/2274",
+      "title": "Commission Implementing Decision (EU) 2026/2274 on the harmonised standards for high-risk AI systems",
+      "file": "EU_Commission_Decision.pdf",
+      "version": "OJ L, 14.10.2026",
+      "date": "2026-10-12",
+      "kind": "legal",
+      "authority": 1,
+      "url": "http://data.europa.eu/eli/dec_impl/2026/2274/oj",
+      "rag": true,
+      "api_transfer_allowed": true,
+      "currency_note": "Yalnızca uyumlaştırılmış standart referansını yayımlar; risk sınıflandırma ölçütü içermez."
+    },
+    {
+      "source_id": "TAI-AG",
+      "short": "TrustAI Agentic AI Governance Playbook",
+      "title": "TrustAI Agentic AI Governance Playbook",
+      "file": "TrustAI_Agentic_Governance_Playbook.pdf",
+      "version": "2026",
+      "date": "2026",
+      "kind": "guidance",
+      "authority": 2,
+      "url": null,
+      "rag": true,
+      "api_transfer_allowed": true,
+      "currency_note": "Rehberlik; bağlayıcı değildir."
+    },
+    {
+      "source_id": "TAI-GOV",
+      "short": "TrustAI AI Governance Playbook",
+      "title": "TrustAI AI Governance Playbook",
+      "file": "TrustAI_Governance_Playbook.pdf",
+      "version": "1.0 (2026)",
+      "date": "2026",
+      "kind": "guidance",
+      "authority": 2,
+      "url": null,
+      "rag": true,
+      "api_transfer_allowed": true,
+      "currency_note": "Rehberlik. 'Yüksek riskli yükümlülükler Ağustos 2026'da tam geçerli olur' ifadesi mevzuat metniyle/sonraki değişikliklerle geçersizleşebilir; mevzuat üstündür."
+    },
+    {
+      "source_id": "NIST-PB",
+      "short": "NIST AI RMF Playbook",
+      "title": "NIST AI RMF Playbook",
+      "file": "AI_RMF_Playbook.pdf",
+      "version": "AI RMF 1.0 Playbook (dosyada sürüm tarihi belirtilmiyor)",
+      "date": "n/a",
+      "kind": "guidance",
+      "authority": 3,
+      "url": "https://airc.nist.gov/airmf-resources/playbook/",
+      "rag": true,
+      "api_transfer_allowed": true,
+      "currency_note": "Gönüllü ABD çerçevesi."
+    },
+    {
+      "source_id": "ISO42001",
+      "short": "ISO/IEC 42001:2023",
+      "title": "ISO/IEC 42001:2023 Information technology — Artificial intelligence — Management system",
+      "file": "ISO_42001_2023.pdf",
+      "version": "First edition, 2023-12",
+      "date": "2023-12",
+      "kind": "standard",
+      "authority": 4,
+      "url": "https://www.iso.org/standard/42001",
+      "rag": false,
+      "api_transfer_allowed": false,
+      "currency_note": "Telif korumalı; tam metnin harici API'ye aktarılması/embedding için kullanım yetkisi açık değil. Yalnız yerel inceleme; RAG indeksine, istemlere ve alıntılara girmez. Raporda yalnız künye olarak listelenir."
+    }
+  ],
+  "internal_design_inputs": "İki yardımcı Word girdisi (kontrol matrisi ve toolkit hazırlığı) iç yapılandırmaya (controls.json, policy.json) dönüştürüldü; kaynakça, RAG ve kullanıcı arayüzünde referans olarak gösterilmez."
+}

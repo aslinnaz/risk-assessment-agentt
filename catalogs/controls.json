@@ -1,0 +1,771 @@
+{
+ "version": "1.0",
+ "note": "Kontrol kapsamı bir güvenlik skoru değildir. Durumlar yalnız insan beyanıdır; teknik doğrulama içermez. Kaynak eşleştirmeleri asıl metinle programatik doğrulanır (tools/verify_catalog.py).",
+ "status_values": {
+  "declared_present": "Var olduğu beyan edildi",
+  "declared_absent": "Yok olduğu beyan edildi",
+  "unknown": "Bilinmiyor",
+  "not_relevant": "Bu kullanımda ilgili değil",
+  "unasked": "Sorulmadı"
+ },
+ "controls": [
+  {
+   "id": "C01",
+   "title_tr": "Kapsam, rol ve risk sınıflandırması",
+   "purpose_tr": "Sistemin rolünün (sağlayıcı/dağıtıcı vb.), AB bağlantısının ve risk sınıflandırma gerekçesinin kayıtlı olması.",
+   "relevant_when_tr": "Her kullanımda.",
+   "info_needed_tr": "Kuruluşun rolü, AB bağlantısı, kullanım amacı ve tarihi.",
+   "sample_question_tr": "Bu sistemi sizin kuruluşunuz mu geliştirdi, yoksa hazır olarak mı kullanıyorsunuz? AB'de kullanılıyor veya çıktıları AB'de kullanılıyor mu?",
+   "followup_when_tr": "Rol belirsizse veya AB bağlantısı varsa kullanım tarihi sorulur.",
+   "topic": "role_eu",
+   "sources": [
+    {
+     "source_id": "AIA",
+     "ref": "Art. 2",
+     "basis": "legal",
+     "keywords": [
+      "scope",
+      "applies to",
+      "deployers"
+     ],
+     "claim_tr": "Tüzüğün kapsamı rol ve AB bağlantısına bağlıdır."
+    },
+    {
+     "source_id": "AIA",
+     "ref": "Art. 6",
+     "basis": "legal",
+     "keywords": [
+      "high-risk",
+      "annex iii"
+     ],
+     "claim_tr": "Yüksek riskli sınıflandırma kuralları."
+    },
+    {
+     "source_id": "NIST-PB",
+     "ref": "GOVERN 1.1",
+     "basis": "guidance",
+     "keywords": [
+      "legal"
+     ],
+     "claim_tr": "Hukuki gerekliliklerin anlaşılması ve yönetilmesi."
+    }
+   ],
+   "legal_note_tr": ""
+  },
+  {
+   "id": "C02",
+   "title_tr": "Yasak uygulama taraması",
+   "purpose_tr": "Kullanımın Art. 5 yasaklarına girip girmediğinin taranması.",
+   "relevant_when_tr": "Her kullanımda.",
+   "info_needed_tr": "Art. 5(1) yasaklarından herhangi birinin gerekli koşullarının bulunup bulunmadığı ve istisna/kapsam/tarih.",
+   "sample_question_tr": "Sistem; kişilerin davranışını bilinçaltı yöntemlerle yönlendirmek, sosyal puanlama, yüz görüntüsü toplama veya duygu çıkarımı gibi şeylerden herhangi birini yapıyor mu?",
+   "followup_when_tr": "'Evet/Belki' cevabında ilgili yasağın koşulları ve istisnası ayrıca sorulur.",
+   "topic": "prohibited_a",
+   "sources": [
+    {
+     "source_id": "AIA",
+     "ref": "Art. 5",
+     "basis": "legal",
+     "keywords": [
+      "prohibited"
+     ],
+     "claim_tr": "Yasak yapay zekâ uygulamaları."
+    },
+    {
+     "source_id": "NIST-PB",
+     "ref": "GOVERN 1.1",
+     "basis": "guidance",
+     "keywords": [
+      "legal"
+     ],
+     "claim_tr": "Hukuki gerekliliklerin yönetimi."
+    }
+   ],
+   "legal_note_tr": ""
+  },
+  {
+   "id": "C03",
+   "title_tr": "Sorumluluk ve yapay zekâ okuryazarlığı",
+   "purpose_tr": "Sistemin sorumlu bir sahibinin olması ve ilgili kişilerin yetkinliği.",
+   "relevant_when_tr": "Her kullanımda.",
+   "info_needed_tr": "Adlandırılmış sahip, eğitim/okuryazarlık uygulaması.",
+   "sample_question_tr": "Bu sistemin sorumlu sahibi olarak adlandırılmış bir kişi var mı ve onu kullananlar yapay zekâ konusunda bilgilendirildi mi?",
+   "followup_when_tr": "",
+   "topic": "governance",
+   "sources": [
+    {
+     "source_id": "AIA",
+     "ref": "Art. 4",
+     "basis": "legal",
+     "keywords": [
+      "ai literacy",
+      "literacy"
+     ],
+     "claim_tr": "Yapay zekâ okuryazarlığı (güncel metin değişikliği teyit edilmeli)."
+    },
+    {
+     "source_id": "NIST-PB",
+     "ref": "GOVERN 2.1",
+     "basis": "guidance",
+     "keywords": [
+      "role",
+      "responsib"
+     ],
+     "claim_tr": "Roller ve sorumlulukların belgelenmesi."
+    }
+   ],
+   "legal_note_tr": "Art. 4 yükümlülüğünün kimi bağladığı sonraki değişikliklerle farklılaşmış olabilir; resmî teyit yapılmadı."
+  },
+  {
+   "id": "C04",
+   "title_tr": "Yaşam döngüsü risk yönetimi",
+   "purpose_tr": "Önemli risklerin sahibi, işlemesi ve kalan risk kararının kayıtlı olması.",
+   "relevant_when_tr": "Yüksek riskli yol veya yüksek etki varsa.",
+   "info_needed_tr": "Risk kaydı / risk değerlendirmesi yapılıp yapılmadığı.",
+   "sample_question_tr": "Bu kullanım için yazılı bir risk değerlendirmesi yapıldı mı?",
+   "followup_when_tr": "",
+   "topic": "governance",
+   "sources": [
+    {
+     "source_id": "AIA",
+     "ref": "Art. 9",
+     "basis": "legal",
+     "keywords": [
+      "risk management system"
+     ],
+     "claim_tr": "Risk yönetim sistemi (yüksek riskli sistemler için)."
+    },
+    {
+     "source_id": "NIST-PB",
+     "ref": "MANAGE 1.1",
+     "basis": "guidance",
+     "keywords": [
+      "manage",
+      "risk"
+     ],
+     "claim_tr": "Riskin ele alınması."
+    }
+   ],
+   "legal_note_tr": ""
+  },
+  {
+   "id": "C05",
+   "title_tr": "İnsanlar ve gruplar üzerindeki etkiler",
+   "purpose_tr": "Etkilenen kişi/grupların ve olası zararların belirlenmesi.",
+   "relevant_when_tr": "Kişileri etkileyen kararlarda.",
+   "info_needed_tr": "Etki değerlendirmesi var mı; etkilenen gruplar.",
+   "sample_question_tr": "Sistemin kararlarından etkilenen kişiler için ayrı bir etki değerlendirmesi yapıldı mı?",
+   "followup_when_tr": "",
+   "topic": "governance",
+   "sources": [
+    {
+     "source_id": "AIA",
+     "ref": "Art. 27",
+     "basis": "legal",
+     "keywords": [
+      "fundamental rights impact assessment"
+     ],
+     "claim_tr": "Temel haklara etki değerlendirmesi (belirli dağıtıcılar için)."
+    },
+    {
+     "source_id": "NIST-PB",
+     "ref": "MAP 5.1",
+     "basis": "guidance",
+     "keywords": [
+      "impact"
+     ],
+     "claim_tr": "Etkilerin belirlenmesi."
+    }
+   ],
+   "legal_note_tr": ""
+  },
+  {
+   "id": "C06",
+   "title_tr": "Veri kalitesi ve kaynağı",
+   "purpose_tr": "Verinin amaca uygunluğunun ve kaynağının bilinmesi.",
+   "relevant_when_tr": "Kişisel veya hassas veri kullanılıyorsa; yüksek riskli yolda.",
+   "info_needed_tr": "Veri türleri, kaynak ve kalite kontrolü.",
+   "sample_question_tr": "Sistem hangi verilerle çalışıyor ve bu verilerin kaynağı ile kalitesi kontrol ediliyor mu?",
+   "followup_when_tr": "Hassas veri varsa koruma önlemleri sorulur.",
+   "topic": "data_docs",
+   "sources": [
+    {
+     "source_id": "AIA",
+     "ref": "Art. 10",
+     "basis": "legal",
+     "keywords": [
+      "data governance",
+      "training, validation"
+     ],
+     "claim_tr": "Veri ve veri yönetişimi."
+    },
+    {
+     "source_id": "NIST-PB",
+     "ref": "MAP 2.3",
+     "basis": "guidance",
+     "keywords": [
+      "data"
+     ],
+     "claim_tr": "Veri ve bilimsel bütünlük."
+    }
+   ],
+   "legal_note_tr": ""
+  },
+  {
+   "id": "C07",
+   "title_tr": "Teknik ve işletimsel dokümantasyon",
+   "purpose_tr": "Mimari, sınırlamalar ve kullanım talimatlarının güncel olması.",
+   "relevant_when_tr": "Yüksek riskli yolda; genel iyi uygulama olarak diğerlerinde.",
+   "info_needed_tr": "Dokümantasyonun varlığı.",
+   "sample_question_tr": "Sistemin nasıl çalıştığını ve sınırlarını anlatan güncel bir doküman var mı?",
+   "followup_when_tr": "",
+   "topic": "data_docs",
+   "sources": [
+    {
+     "source_id": "AIA",
+     "ref": "Art. 11",
+     "basis": "legal",
+     "keywords": [
+      "technical documentation"
+     ],
+     "claim_tr": "Teknik dokümantasyon."
+    },
+    {
+     "source_id": "AIA",
+     "ref": "Art. 13",
+     "basis": "legal",
+     "keywords": [
+      "instructions for use",
+      "transparent"
+     ],
+     "claim_tr": "Şeffaflık ve dağıtıcılara bilgi."
+    }
+   ],
+   "legal_note_tr": ""
+  },
+  {
+   "id": "C08",
+   "title_tr": "Eylem izlenebilirliği ve kayıtlar",
+   "purpose_tr": "Eylemlerin tetikleyici, araç çağrısı, onay ve sonuçla ilişkilendirilebilmesi.",
+   "relevant_when_tr": "Sistem eylem alıyorsa veya yüksek riskli yolda.",
+   "info_needed_tr": "Kayıt tutma beyanı.",
+   "sample_question_tr": "Sistemin yaptığı işlemler (hangi araç, ne zaman, kimin onayıyla) kaydediliyor mu?",
+   "followup_when_tr": "",
+   "topic": "logging",
+   "sources": [
+    {
+     "source_id": "AIA",
+     "ref": "Art. 12",
+     "basis": "legal",
+     "keywords": [
+      "record-keeping",
+      "logs",
+      "automatic recording"
+     ],
+     "claim_tr": "Kayıt tutma."
+    },
+    {
+     "source_id": "TAI-AG",
+     "ref": "s. 13",
+     "basis": "guidance",
+     "keywords": [
+      "logging",
+      "log"
+     ],
+     "claim_tr": "Ajan eylemlerinin kaydı (rehberlik)."
+    }
+   ],
+   "legal_note_tr": ""
+  },
+  {
+   "id": "C09",
+   "title_tr": "Etkili insan gözetimi",
+   "purpose_tr": "Kritik işlemlerin geçerli insan onayı/müdahalesiyle yapılması ve durdurma mekanizması.",
+   "relevant_when_tr": "Sistem karar destekliyor veya eylem alıyorsa.",
+   "info_needed_tr": "Onay kapsamı, müdahale ve durdurma imkânı.",
+   "sample_question_tr": "Bir işlem yapılmadan önce bir insan onaylıyor mu, ve gerekirse sistemi durdurabilen biri var mı?",
+   "followup_when_tr": "Onay varsa: işleme özel mi, süresi/parametresi var mı?",
+   "topic": "approval",
+   "sources": [
+    {
+     "source_id": "AIA",
+     "ref": "Art. 14",
+     "basis": "legal",
+     "keywords": [
+      "human oversight",
+      "intervene",
+      "stop"
+     ],
+     "claim_tr": "İnsan gözetimi."
+    },
+    {
+     "source_id": "TAI-AG",
+     "ref": "s. 10",
+     "basis": "guidance",
+     "keywords": [
+      "oversight"
+     ],
+     "claim_tr": "Gözetim spektrumu (rehberlik)."
+    }
+   ],
+   "legal_note_tr": ""
+  },
+  {
+   "id": "C10",
+   "title_tr": "Doğruluk ve güvenilirlik",
+   "purpose_tr": "Sistemin amaca uygun başarı/hata ölçütlerinin test edilmesi.",
+   "relevant_when_tr": "Karar veya işlem etkisi olan kullanımlarda.",
+   "info_needed_tr": "Performans test beyanı.",
+   "sample_question_tr": "Sistemin doğruluğu için önceden belirlenmiş ölçütlerle test yapıldı mı?",
+   "followup_when_tr": "",
+   "topic": "security",
+   "sources": [
+    {
+     "source_id": "AIA",
+     "ref": "Art. 15",
+     "basis": "legal",
+     "keywords": [
+      "accuracy",
+      "robustness"
+     ],
+     "claim_tr": "Doğruluk, sağlamlık, siber güvenlik."
+    },
+    {
+     "source_id": "NIST-PB",
+     "ref": "MEASURE 2.5",
+     "basis": "guidance",
+     "keywords": [
+      "valid",
+      "reliable"
+     ],
+     "claim_tr": "Geçerlilik ve güvenilirlik."
+    }
+   ],
+   "legal_note_tr": ""
+  },
+  {
+   "id": "C11",
+   "title_tr": "Araç erişimi ve yetki sınırları",
+   "purpose_tr": "Araç/yetki matrisinin teknik olarak uygulanması; yetkisiz eylem ve yetki yükseltmenin engellenmesi.",
+   "relevant_when_tr": "Sistem araç çağırıyor veya sistemlere erişiyorsa.",
+   "info_needed_tr": "Araçlar, izinler, sınırların teknik/politika düzeyinde olması.",
+   "sample_question_tr": "Sistem hangi araçlara/sistemlere erişebiliyor ve bu sınırlar teknik olarak mı uygulanıyor, yoksa yalnız talimatla mı?",
+   "followup_when_tr": "Yetki genişletme veya devir (delegasyon) varsa ayrıca sorulur.",
+   "topic": "tools",
+   "sources": [
+    {
+     "source_id": "AIA",
+     "ref": "Art. 14",
+     "basis": "legal",
+     "keywords": [
+      "oversight",
+      "intervene"
+     ],
+     "claim_tr": "Dolaylı: gözetim ve müdahale. Araç yetkisine özgü açık bir hüküm değildir."
+    },
+    {
+     "source_id": "TAI-AG",
+     "ref": "s. 6",
+     "basis": "guidance",
+     "keywords": [
+      "tool"
+     ],
+     "claim_tr": "Araçlar ajanın erişimini belirler (rehberlik)."
+    }
+   ],
+   "legal_note_tr": "Mevzuatta ajan yetkilerine özgü açık bir hüküm yoktur; bu kontrol dolaylı ve rehberlik niteliğindedir."
+  },
+  {
+   "id": "C12",
+   "title_tr": "Kötü niyetli talimatlara dayanıklılık",
+   "purpose_tr": "Belge, mesaj ve araç çıktılarındaki kötü niyetli talimatların davranışı değiştirmemesi.",
+   "relevant_when_tr": "Sistem dış içerik okuyorsa.",
+   "info_needed_tr": "Dış içerik kaynağı ve savunma beyanı.",
+   "sample_question_tr": "Sistem internetten veya kullanıcı belgelerinden içerik okuyup bunlara göre işlem yapıyor mu? Kötü niyetli talimatlara karşı bir önlem var mı?",
+   "followup_when_tr": "",
+   "topic": "security",
+   "sources": [
+    {
+     "source_id": "AIA",
+     "ref": "Art. 15",
+     "basis": "legal",
+     "keywords": [
+      "cybersecurity",
+      "attacks"
+     ],
+     "claim_tr": "Dolaylı: siber güvenlik."
+    },
+    {
+     "source_id": "TAI-AG",
+     "ref": "s. 9",
+     "basis": "guidance",
+     "keywords": [
+      "prompt",
+      "injection",
+      "instruction"
+     ],
+     "claim_tr": "Dolaylı istem enjeksiyonu (rehberlik)."
+    }
+   ],
+   "legal_note_tr": "Dolaylı; mevzuat ajanlara özgü açık hüküm içermez."
+  },
+  {
+   "id": "C13",
+   "title_tr": "Bellek ve bağlam bütünlüğü",
+   "purpose_tr": "Kalıcı belleğin manipüle edilememesi, oturum/kiracı ayrımı.",
+   "relevant_when_tr": "Sistem kalıcı bellek tutuyorsa.",
+   "info_needed_tr": "Bellek kullanımı ve ayrımı.",
+   "sample_question_tr": "Sistem oturumlar arasında bir şey hatırlıyor mu (kalıcı bellek)?",
+   "followup_when_tr": "",
+   "topic": "security",
+   "sources": [
+    {
+     "source_id": "TAI-AG",
+     "ref": "s. 6",
+     "basis": "guidance",
+     "keywords": [
+      "memory"
+     ],
+     "claim_tr": "Bellek yönetişimi (rehberlik)."
+    }
+   ],
+   "legal_note_tr": ""
+  },
+  {
+   "id": "C14",
+   "title_tr": "Döngü, maliyet ve zincirleme hata sınırları",
+   "purpose_tr": "Adım/süre/bütçe sınırları; bağımlılık hatalarında güvenli durma.",
+   "relevant_when_tr": "Sistem çok adımlı veya otonom çalışıyorsa.",
+   "info_needed_tr": "Sınır ve güvenli durdurma beyanı.",
+   "sample_question_tr": "Sistem sınırsız tekrar etmesin diye adım, süre veya bütçe sınırı var mı?",
+   "followup_when_tr": "",
+   "topic": "security",
+   "sources": [
+    {
+     "source_id": "TAI-AG",
+     "ref": "s. 27",
+     "basis": "guidance",
+     "keywords": [
+      "stop",
+      "budget",
+      "kill"
+     ],
+     "claim_tr": "Durma koşulları ve bütçe sınırları (rehberlik)."
+    }
+   ],
+   "legal_note_tr": ""
+  },
+  {
+   "id": "C15",
+   "title_tr": "Harici model, araç ve ajan güvencesi",
+   "purpose_tr": "Tedarikçi sürümleri, sorumluluklar ve değişiklik koşulları.",
+   "relevant_when_tr": "Üçüncü taraf model/araç kullanılıyorsa.",
+   "info_needed_tr": "Tedarikçi ilişkileri.",
+   "sample_question_tr": "Sistem üçüncü taraf bir model veya araç kullanıyor mu, sürüm ve sorumluluklar belirli mi?",
+   "followup_when_tr": "",
+   "topic": "supply_change",
+   "sources": [
+    {
+     "source_id": "AIA",
+     "ref": "Art. 25",
+     "basis": "legal",
+     "keywords": [
+      "responsibilities along the ai value chain",
+      "third party"
+     ],
+     "claim_tr": "Değer zincirindeki sorumluluklar."
+    },
+    {
+     "source_id": "NIST-PB",
+     "ref": "GOVERN 6.1",
+     "basis": "guidance",
+     "keywords": [
+      "third-party"
+     ],
+     "claim_tr": "Üçüncü taraf riskleri."
+    }
+   ],
+   "legal_note_tr": ""
+  },
+  {
+   "id": "C16",
+   "title_tr": "Kullanıcı bilgilendirme ve şeffaflık",
+   "purpose_tr": "Uygulanabilir yapay zekâ açıklamalarının sunulması.",
+   "relevant_when_tr": "Kullanıcıyla etkileşim, sentetik içerik, duygu tanıma veya deepfake varsa.",
+   "info_needed_tr": "Şeffaflığı ilgilendiren özellikler.",
+   "sample_question_tr": "Kullanıcılar bir yapay zekâ ile konuştuklarını biliyor mu?",
+   "followup_when_tr": "Sentetik içerik üretiliyorsa işaretleme sorulur.",
+   "topic": "transparency",
+   "sources": [
+    {
+     "source_id": "AIA",
+     "ref": "Art. 50",
+     "basis": "legal",
+     "keywords": [
+      "interact",
+      "disclos",
+      "synthetic"
+     ],
+     "claim_tr": "Belirli sistemler için şeffaflık yükümlülükleri."
+    },
+    {
+     "source_id": "NIST-PB",
+     "ref": "GOVERN 4.2",
+     "basis": "guidance",
+     "keywords": [
+      "document"
+     ],
+     "claim_tr": "Belgeleme ve iletişim."
+    }
+   ],
+   "legal_note_tr": ""
+  },
+  {
+   "id": "C17",
+   "title_tr": "Değişiklik kontrolü ve yeniden değerlendirme",
+   "purpose_tr": "Model/araç/yetki değişikliklerinin yeniden değerlendirmeyi tetiklemesi.",
+   "relevant_when_tr": "Sistem sürekli değişiyorsa.",
+   "info_needed_tr": "Değişiklik süreci.",
+   "sample_question_tr": "Modelde, araçlarda veya yetkilerde değişiklik olduğunda yeniden değerlendirme yapılıyor mu?",
+   "followup_when_tr": "",
+   "topic": "supply_change",
+   "sources": [
+    {
+     "source_id": "AIA",
+     "ref": "Art. 43",
+     "basis": "legal",
+     "keywords": [
+      "substantial modification"
+     ],
+     "claim_tr": "Önemli değişiklikte yeniden uygunluk değerlendirmesi (yüksek riskli yol)."
+    },
+    {
+     "source_id": "NIST-PB",
+     "ref": "GOVERN 1.5",
+     "basis": "guidance",
+     "keywords": [
+      "monitor",
+      "review"
+     ],
+     "claim_tr": "Süregelen izleme ve gözden geçirme."
+    }
+   ],
+   "legal_note_tr": ""
+  },
+  {
+   "id": "C18",
+   "title_tr": "Operasyonel izleme",
+   "purpose_tr": "İzleme planı ve uyarıların sorumluya ulaşması.",
+   "relevant_when_tr": "Üretimde çalışan sistemlerde.",
+   "info_needed_tr": "İzleme beyanı.",
+   "sample_question_tr": "Sistemin canlı davranışını izleyen biri veya bir uyarı sistemi var mı?",
+   "followup_when_tr": "",
+   "topic": "logging",
+   "sources": [
+    {
+     "source_id": "AIA",
+     "ref": "Art. 72",
+     "basis": "legal",
+     "keywords": [
+      "post-market monitoring"
+     ],
+     "claim_tr": "Piyasaya arz sonrası izleme (sağlayıcılar, yüksek riskli)."
+    },
+    {
+     "source_id": "NIST-PB",
+     "ref": "MEASURE 3.1",
+     "basis": "guidance",
+     "keywords": [
+      "monitor",
+      "track"
+     ],
+     "claim_tr": "Riskin zaman içinde izlenmesi."
+    }
+   ],
+   "legal_note_tr": ""
+  },
+  {
+   "id": "C19",
+   "title_tr": "Olay müdahalesi ve bildirim",
+   "purpose_tr": "Olay sınıflandırma, sorumlu ve bildirim sürelerinin bilinmesi.",
+   "relevant_when_tr": "Üretimde çalışan sistemlerde.",
+   "info_needed_tr": "Olay müdahale beyanı.",
+   "sample_question_tr": "Bir sorun veya olay yaşanırsa ne yapılacağı ve kime bildirileceği belirli mi?",
+   "followup_when_tr": "",
+   "topic": "logging",
+   "sources": [
+    {
+     "source_id": "AIA",
+     "ref": "Art. 73",
+     "basis": "legal",
+     "keywords": [
+      "serious incident"
+     ],
+     "claim_tr": "Ciddi olay bildirimi (yüksek riskli sistemler)."
+    },
+    {
+     "source_id": "NIST-PB",
+     "ref": "MANAGE 4.3",
+     "basis": "guidance",
+     "keywords": [
+      "incident"
+     ],
+     "claim_tr": "Olayların iletişimi ve takibi."
+    }
+   ],
+   "legal_note_tr": ""
+  },
+  {
+   "id": "C20",
+   "title_tr": "Gerekli uygunluk faaliyetleri",
+   "purpose_tr": "Uygulanabilir uygunluk değerlendirmesi, beyan, işaretleme, kayıt kanıtı.",
+   "relevant_when_tr": "Yüksek riskli yolda (sağlayıcı).",
+   "info_needed_tr": "Yüksek riskli yolda ise uygunluk süreçleri.",
+   "sample_question_tr": "Sistem yüksek riskli kategoriye giriyorsa uygunluk değerlendirmesi ve kayıt süreçleri planlandı mı?",
+   "followup_when_tr": "",
+   "topic": "supply_change",
+   "sources": [
+    {
+     "source_id": "AIA",
+     "ref": "Art. 43",
+     "basis": "legal",
+     "keywords": [
+      "conformity assessment"
+     ],
+     "claim_tr": "Uygunluk değerlendirmesi."
+    },
+    {
+     "source_id": "AIA",
+     "ref": "Art. 49",
+     "basis": "legal",
+     "keywords": [
+      "registration"
+     ],
+     "claim_tr": "Kayıt."
+    }
+   ],
+   "legal_note_tr": ""
+  },
+  {
+   "id": "C21",
+   "title_tr": "Bağımsız yönetim sistemi gözden geçirmesi",
+   "purpose_tr": "Denetim ve yönetim gözden geçirme kayıtları.",
+   "relevant_when_tr": "Kurumsal yönetim sistemi varsa.",
+   "info_needed_tr": "İç/dış denetim.",
+   "sample_question_tr": "Yapay zekâ yönetişiminiz için düzenli iç veya bağımsız denetim yapılıyor mu?",
+   "followup_when_tr": "",
+   "topic": "supply_change",
+   "sources": [
+    {
+     "source_id": "AIA",
+     "ref": "Art. 17",
+     "basis": "legal",
+     "keywords": [
+      "quality management system"
+     ],
+     "claim_tr": "Kalite yönetim sistemi (kısmi uyum)."
+    }
+   ],
+   "legal_note_tr": "Kısmi uyum: Art. 17 yalnız yüksek riskli sağlayıcıları bağlar."
+  }
+ ],
+ "scope_rules": [
+  {
+   "controls": [
+    "C16"
+   ],
+   "when": {
+    "t_interacts_people": [
+     "no"
+    ],
+    "t_synthetic_content": [
+     "no"
+    ],
+    "t_emotion_biometric": [
+     "no"
+    ]
+   },
+   "all": true,
+   "reason_tr": "Kişilerle doğrudan etkileşim, içerik üretimi ve duygu/biyometrik sınıflandırma olmadığı beyan edildi; şeffaflık bildirimi bu kullanımda ilgili değil (beyana göre)."
+  },
+  {
+   "controls": [
+    "C20",
+    "C21"
+   ],
+   "when_legal": [
+    "not_high_by_declaration",
+    "out_of_scope_declared",
+    "annex3_exception_claimed"
+   ],
+   "reason_tr": "Hukuki yüksek riskli yol beyanla desteklenmediği için yüksek riskli sağlayıcı yükümlülüklerine bağlı uygunluk faaliyetleri bu kullanımda ilgili değil (beyana göre; AB kapsamı doğrulanmadı)."
+  }
+ ],
+ "result_relevance": [
+  {
+   "controls": [
+    "C09"
+   ],
+   "when": {
+    "action_mode": [
+     "recommend",
+     "draft",
+     "approved_action"
+    ]
+   },
+   "why_tr": "Agentın düşük otonomi/insan kararı beyanı, insan gözetiminin gerçekten var olduğu beyanına dayanıyor."
+  },
+  {
+   "controls": [
+    "C11"
+   ],
+   "when": {
+    "action_mode": [
+     "approved_action",
+     "envelope_action",
+     "self_expanding"
+    ]
+   },
+   "why_tr": "İşlem yapan agentın yetki sınırları sonucu doğrudan etkiler."
+  },
+  {
+   "controls": [
+    "C16"
+   ],
+   "when_any": {
+    "t_interacts_people": [
+     "yes"
+    ],
+    "t_synthetic_content": [
+     "yes"
+    ],
+    "t_emotion_biometric": [
+     "yes"
+    ]
+   },
+   "why_tr": "Şeffaflıkla ilgili özellik beyan edildi."
+  },
+  {
+   "controls": [
+    "C06"
+   ],
+   "when": {
+    "personal_data": [
+     "special"
+    ]
+   },
+   "why_tr": "Hassas veri kullanımı beyan edildi."
+  },
+  {
+   "controls": [
+    "C20"
+   ],
+   "when_legal": [
+    "annex3_high",
+    "annex3_high_profiling",
+    "annex1_high"
+   ],
+   "why_tr": "Hukuki yüksek riskli yol değerlendirmesi yapıldı."
+  }
+ ]
+}

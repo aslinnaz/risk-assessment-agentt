@@ -1,0 +1,2066 @@
+{
+ "version": "2.0",
+ "slots": {
+  "purpose": "text",
+  "affected_decisions": "text",
+  "org_role": [
+   "provider",
+   "deployer",
+   "importer_distributor",
+   "other",
+   "unknown"
+  ],
+  "eu_link": [
+   "yes",
+   "no",
+   "unknown"
+  ],
+  "use_status": [
+   "live",
+   "planned",
+   "unknown"
+  ],
+  "g_biometric": [
+   "yes",
+   "no",
+   "unknown"
+  ],
+  "g_influence": [
+   "yes",
+   "no",
+   "unknown"
+  ],
+  "g_person_eval": [
+   "yes",
+   "no",
+   "unknown"
+  ],
+  "p_manipulation": [
+   "none",
+   "possible",
+   "supported",
+   "excepted",
+   "unknown"
+  ],
+  "p_exploit_vulnerability": [
+   "none",
+   "possible",
+   "supported",
+   "excepted",
+   "unknown"
+  ],
+  "p_social_scoring": [
+   "none",
+   "possible",
+   "supported",
+   "excepted",
+   "unknown"
+  ],
+  "p_crime_profiling": [
+   "none",
+   "possible",
+   "supported",
+   "excepted",
+   "unknown"
+  ],
+  "p_facial_scraping": [
+   "none",
+   "possible",
+   "supported",
+   "excepted",
+   "unknown"
+  ],
+  "p_emotion_work_edu": [
+   "none",
+   "possible",
+   "supported",
+   "excepted",
+   "unknown"
+  ],
+  "p_biometric_categorisation": [
+   "none",
+   "possible",
+   "supported",
+   "excepted",
+   "unknown"
+  ],
+  "p_rbi_law_enforcement": [
+   "none",
+   "possible",
+   "supported",
+   "excepted",
+   "unknown"
+  ],
+  "annex1_product": [
+   "yes",
+   "no",
+   "unknown"
+  ],
+  "annex3_area": [
+   "none",
+   "biometrics",
+   "critical_infrastructure",
+   "education",
+   "employment",
+   "essential_services",
+   "law_enforcement",
+   "migration",
+   "justice_democracy",
+   "unknown"
+  ],
+  "profiling": [
+   "yes",
+   "no",
+   "unknown"
+  ],
+  "art6_3_exception": [
+   "none",
+   "narrow_procedural",
+   "improve_prior_human_work",
+   "detect_patterns",
+   "preparatory",
+   "unknown"
+  ],
+  "influences_decision": [
+   "yes",
+   "no",
+   "unknown"
+  ],
+  "t_interacts_people": [
+   "yes",
+   "no",
+   "unknown"
+  ],
+  "t_synthetic_content": [
+   "yes",
+   "no",
+   "unknown"
+  ],
+  "t_emotion_biometric": [
+   "yes",
+   "no",
+   "unknown"
+  ],
+  "t_deepfake_public_text": [
+   "yes",
+   "no",
+   "unknown"
+  ],
+  "personal_data": [
+   "none",
+   "ordinary",
+   "special",
+   "unknown"
+  ],
+  "vulnerable_groups": [
+   "yes",
+   "no",
+   "unknown"
+  ],
+  "action_mode": [
+   "info_only",
+   "recommend",
+   "draft",
+   "approved_action",
+   "envelope_action",
+   "self_expanding",
+   "unknown"
+  ],
+  "tools_summary": "text",
+  "human_review": [
+   "yes",
+   "no",
+   "partial",
+   "unknown"
+  ],
+  "approval_bound": [
+   "yes",
+   "no",
+   "partial",
+   "unknown"
+  ],
+  "limits_enforced": [
+   "technical",
+   "policy_only",
+   "none",
+   "unknown"
+  ],
+  "authority_expansion": [
+   "yes",
+   "no",
+   "unknown"
+  ],
+  "delegates_to_agents": [
+   "yes",
+   "no",
+   "unknown"
+  ],
+  "max_harm": [
+   "minimal",
+   "limited",
+   "serious",
+   "critical",
+   "unknown"
+  ],
+  "harm_desc": "text",
+  "reversibility": [
+   "reversible",
+   "partly",
+   "irreversible",
+   "unknown"
+  ],
+  "reach": [
+   "single",
+   "group",
+   "wide",
+   "unknown"
+  ],
+  "eval_uses_social_traits": [
+   "yes",
+   "no",
+   "unknown"
+  ],
+  "eval_predicts_crime": [
+   "yes",
+   "no",
+   "unknown"
+  ],
+  "approval_exists": [
+   "yes",
+   "no",
+   "unknown"
+  ],
+  "can_stop": [
+   "yes",
+   "no",
+   "unknown"
+  ],
+  "can_rollback": [
+   "yes",
+   "no",
+   "unknown"
+  ],
+  "human_reexam": [
+   "yes",
+   "no",
+   "partial",
+   "unknown"
+  ]
+ },
+ "slot_desc_tr": {
+  "purpose": "agentın tek kullanım amacı/görevi",
+  "affected_decisions": "çıktısından etkilenen kişiler ve kararlar",
+  "eu_link": "AB'de kullanım veya çıktının AB'deki kişileri/kuruluşları etkilemesi",
+  "org_role": "kuruluş agenti geliştiren mi, kullanan mı",
+  "g_biometric": "yüz/ses/parmak izi gibi biyometrik veri işliyor mu",
+  "g_influence": "agentın AMACI, kendisiyle karşılaşan kişileri belirli bir davranışa (satın alma, oy verme, vazgeçme gibi) yönlendirmek mi (bir karar vericiye öneri sunması veya kararı etkilemesi bu DEĞİLDİR)",
+  "g_person_eval": "agent kişilere puan, sıralama veya risk/uygunluk değeri atıyor mu (yalnız bu olgu; tek başına sosyal puanlama ya da suç tahmini anlamına GELMEZ)",
+  "annex3_area": "hassas kullanım alanı (işe alım→employment, kredi/sigorta/temel hizmet→essential_services, eğitim, kolluk, göç, adalet, kritik altyapı) veya none; kullanıcı alanı kendisi açıkça söylediyse (ör. 'işe alım agentı') DOLDUR; biyometri yalnız g_biometric ile ayrıca sorulur",
+  "annex1_product": "agent bir ürünün güvenlik bileşeni mi (tıbbi cihaz, makine vb.)",
+  "profiling": "kişileri profilliyor mu",
+  "art6_3_exception": "yalnız dar prosedür/tamamlanmış insan işini iyileştirme/karar kalıbı tespiti/hazırlık görevi mi",
+  "influences_decision": "çıktısı insan kararını fiilen yönlendiriyor mu",
+  "t_interacts_people": "agent bir kişiyle (müşteri, çalışan vb.) DOĞRUDAN konuşuyor/mesajlaşıyor mu",
+  "t_synthetic_content": "ses/görüntü/video/metin içerik üretip yayıyor mu",
+  "t_deepfake_public_text": "gerçek kişi/olay gibi görünen içerik veya kamuya bilgi amaçlı metin",
+  "personal_data": "agentın kullandığı kişisel veri türü",
+  "vulnerable_groups": "çocuk, yaşlı vb. korunmasız gruplar etkileniyor mu",
+  "action_mode": "agentın yetkisi (aşağıdaki açıklamaya bak)",
+  "human_review": "karar verici öneri/taslağın gerekçesini görüp itiraz edebiliyor mu",
+  "approval_bound": "(onay varsa) onay yalnız o işleme özel mi",
+  "limits_enforced": "sınırlar teknik mi, talimat mı",
+  "authority_expansion": "yetkisini/erişimini kendisi genişletebiliyor mu",
+  "delegates_to_agents": "başka agent/araçlara iş devrediyor mu",
+  "max_harm": "hata halinde en kötü makul zarar",
+  "reversibility": "zarar geri alınabilir mi",
+  "reach": "kaç kişi/birimi etkiler",
+  "eval_uses_social_traits": "puan/değerlendirme kişinin sosyal davranışına, kişilik özelliklerine veya genel çevrimiçi davranışına dayanan veri de kullanıyor mu (yalnız kullanıcı söylediyse)",
+  "eval_predicts_crime": "değerlendirme kişinin suç/dolandırıcılık işleme olasılığını tahmin etmeyi de içeriyor mu (yalnız kullanıcı söylediyse)",
+  "p_manipulation": "",
+  "approval_exists": "işlem yapılmadan önce bir insan onayı alınıyor mu",
+  "can_stop": "biri agentı hemen durdurabiliyor mu",
+  "can_rollback": "agentın yaptığı işlem hatalıysa geri alınabiliyor mu",
+  "human_reexam": "agentın sonucundan olumsuz etkilenen birinin dosyasını bir insan yeniden inceleyebiliyor mu"
+ },
+ "slot_help_tr": {
+  "action_mode": "info_only=yalnız bilgi üretir; recommend=öneri verir, insan karar verip kendisi uygular; draft=taslak hazırlar, insan gönderir/uygular; approved_action=işlemi yalnız o işleme özel insan onayından sonra yapar; envelope_action=tanımlı sınırlar içinde her işlem için onay olmadan yapar; self_expanding=kapsamını veya yetkisini kendisi genişletebilir/devredebilir",
+  "p_*": "none=kullanıcı açıkça yok dedi; possible=olabilir/belirsiz; supported=yasağın gerekli koşulları cevaplarla destekleniyor VE istisna/kapsam/tarih değerlendirildi, istisna uygulanmıyor; excepted=istisna uygulanıyor; unknown=bilmiyorum (p_* değerleri normalde g_* kapı cevaplarından türetilir; yalnız ayrıntı sorulduysa doldur)"
+ },
+ "topics": [
+  {
+   "id": "purpose",
+   "phase": "Kapsam",
+   "title": "Kullanım amacı ve etkilenen kararlar",
+   "slots": [
+    "purpose",
+    "affected_decisions"
+   ],
+   "controls": [
+    "C01"
+   ],
+   "critical": true,
+   "priority": 100,
+   "hint": "intended purpose use for which an AI system is intended",
+   "sources": [
+    "AIA"
+   ],
+   "anchors": [],
+   "default_q": "Değerlendireceğimiz agentın yaptığı işi kısaca anlatır mısınız?",
+   "open": true
+  },
+  {
+   "id": "eu_link",
+   "phase": "Kapsam",
+   "title": "AB bağlantısı",
+   "slots": [
+    "eu_link"
+   ],
+   "controls": [
+    "C01"
+   ],
+   "critical": false,
+   "priority": 95,
+   "hint": "scope applies to providers deployers located in the Union output used in the Union",
+   "sources": [
+    "AIA"
+   ],
+   "anchors": [
+    "AIA|Art. 2(1)"
+   ],
+   "default_q": "Agent AB'de mi kullanılıyor, ya da çıktıları AB'deki kişileri veya kuruluşları etkiliyor mu?",
+   "options": [
+    "Evet, AB'de kullanılıyor",
+    "AB ile bağlantısı yok",
+    "Bilmiyorum"
+   ],
+   "simple_q": "Kısaca: agentın çıktılarını AB'de yaşayan kişiler veya AB'deki bir kuruluş kullanıyor ya da bunlardan etkileniyor mu? Emin değilseniz müşterilerinizin ve kuruluşunuzun hangi ülkelerde olduğunu yazabilirsiniz.",
+   "asked": false
+  },
+  {
+   "id": "org_role",
+   "phase": "Kapsam",
+   "title": "Kuruluşun rolü",
+   "slots": [
+    "org_role"
+   ],
+   "controls": [
+    "C01"
+   ],
+   "critical": false,
+   "priority": 72,
+   "hint": "provider deployer importer distributor definitions role",
+   "sources": [
+    "AIA"
+   ],
+   "anchors": [
+    "AIA|Art. 25(1)"
+   ],
+   "default_q": "Bu agenti kuruluşunuz mu geliştirdi, yoksa başkasının geliştirdiği agenti mi kullanıyorsunuz?",
+   "options": [
+    "Biz geliştirdik",
+    "Hazır agenti kullanıyoruz",
+    "Emin değilim"
+   ],
+   "context": true,
+   "option_map": {
+    "Biz geliştirdik": {
+     "org_role": "provider"
+    },
+    "Hazır agenti kullanıyoruz": {
+     "org_role": "deployer"
+    },
+    "Emin değilim": {
+     "org_role": "unknown"
+    }
+   }
+  },
+  {
+   "id": "use_status",
+   "phase": "Kapsam",
+   "title": "Kullanım durumu ve tarihi",
+   "slots": [
+    "use_status"
+   ],
+   "controls": [
+    "C01"
+   ],
+   "critical": false,
+   "priority": 40,
+   "hint": "date of application obligations apply from",
+   "sources": [
+    "AIA"
+   ],
+   "anchors": [
+    "AIA|Art. 113"
+   ],
+   "default_q": "Agent şu an canlıda mı, yoksa planlanan bir kullanım mı?",
+   "options": [
+    "Canlıda",
+    "Planlanıyor",
+    "Bilmiyorum"
+   ],
+   "context": true,
+   "option_map": {
+    "Canlıda": {
+     "use_status": "live"
+    },
+    "Planlanıyor": {
+     "use_status": "planned"
+    },
+    "Bilmiyorum": {
+     "use_status": "unknown"
+    }
+   }
+  },
+  {
+   "id": "g_biometric",
+   "phase": "Kullanım",
+   "title": "Biyometri taraması",
+   "slots": [
+    "g_biometric"
+   ],
+   "controls": [
+    "C02"
+   ],
+   "critical": true,
+   "priority": 88,
+   "hint": "prohibited biometric categorisation emotion inference facial images remote biometric identification",
+   "sources": [
+    "AIA"
+   ],
+   "anchors": [
+    "AIA|Art. 5(1)(g)",
+    "AIA|Art. 5(1)(f)"
+   ],
+   "default_q": "Agent, kişileri tanımak ya da özelliklerini çıkarmak için yüz, ses veya parmak izi gibi biyometrik veriler kullanıyor mu?",
+   "options": [
+    "Evet",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "simple_q": "Örneğin kapıda yüz tanıma, sesten kimlik doğrulama, parmak izi okuma ya da kameradan duygu analizi gibi bir şey var mı?",
+   "focus_terms": [
+    "biyometri",
+    "parmak izi",
+    "yüz ",
+    "yüzü"
+   ]
+  },
+  {
+   "id": "g_influence",
+   "phase": "Kullanım",
+   "title": "Davranış yönlendirme taraması",
+   "slots": [
+    "g_influence"
+   ],
+   "controls": [
+    "C02"
+   ],
+   "critical": true,
+   "priority": 86,
+   "hint": "prohibited manipulative deceptive techniques exploit vulnerabilities distort behaviour",
+   "sources": [
+    "AIA"
+   ],
+   "anchors": [
+    "AIA|Art. 5(1)(a)",
+    "AIA|Art. 5(1)(b)"
+   ],
+   "default_q": "Agentın amacı, kendisiyle karşılaşan kişileri belirli bir davranışa (satın alma, tıklama, oy verme, vazgeçme gibi) yönlendirmek mi? Karar vericiye yalnızca öneri sunması buna girmez.",
+   "options": [
+    "Evet",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "simple_q": "Örneğin kullanıcıyı bir şey satın almaya veya kararını değiştirmeye ikna etmek için tasarlanmış mesajlar üretiyor mu?",
+   "focus_terms": [
+    "davranışa",
+    "yönlendirmek mi",
+    "ikna"
+   ]
+  },
+  {
+   "id": "g_person_eval",
+   "phase": "Kullanım",
+   "title": "Kişi puanlama taraması",
+   "slots": [
+    "g_person_eval"
+   ],
+   "controls": [
+    "C02"
+   ],
+   "critical": true,
+   "priority": 84,
+   "hint": "prohibited social scoring risk assessment of natural persons criminal offence profiling",
+   "sources": [
+    "AIA"
+   ],
+   "anchors": [
+    "AIA|Art. 5(1)(c)",
+    "AIA|Art. 5(1)(d)"
+   ],
+   "default_q": "Agent kişilere bir puan, sıralama veya risk/uygunluk değeri atıyor mu?",
+   "options": [
+    "Evet",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "simple_q": "Örneğin başvuru sahiplerine, müşterilere veya çalışanlara bir skor ya da sıra numarası veriyor mu?",
+   "focus_terms": [
+    "puan, sıralama",
+    "risk/uygunluk"
+   ]
+  },
+  {
+   "id": "prohibited_detail",
+   "phase": "Kullanım",
+   "title": "Olası yasağın koşulları ve istisnası",
+   "slots": [],
+   "controls": [
+    "C02"
+   ],
+   "critical": true,
+   "priority": 99,
+   "hint": "prohibited practices conditions exceptions",
+   "sources": [
+    "AIA"
+   ],
+   "anchors": [
+    "AIA|Art. 5(1)(a)"
+   ],
+   "default_q": "Yasak kullanım taramasında hangi özelliğin söz konusu olduğunu netleştirmem gerekiyor.",
+   "condition": null,
+   "asked": false
+  },
+  {
+   "id": "annex3",
+   "phase": "Kullanım",
+   "title": "Hassas kullanım alanı",
+   "slots": [
+    "annex3_area"
+   ],
+   "controls": [
+    "C01"
+   ],
+   "critical": true,
+   "priority": 92,
+   "hint": "high-risk AI systems Annex III areas employment education essential services law enforcement migration justice biometrics",
+   "sources": [
+    "AIA"
+   ],
+   "anchors": [
+    "AIA|Art. 6(2)",
+    "AIA|Annex III"
+   ],
+   "default_q": "Agentın görevi şu alanlardan birine giriyor mu: işe alım/çalışan yönetimi, eğitim/sınav, kredi-sigorta-sosyal yardım gibi temel hizmetlere erişim, kolluk, göç/sınır, adalet/seçim veya kritik altyapı?",
+   "options": [
+    "Hiçbiri",
+    "İşe alım / çalışan yönetimi",
+    "Kredi / sigorta / temel hizmetler",
+    "Eğitim / sınav",
+    "Başka bir alan",
+    "Bilmiyorum"
+   ],
+   "simple_q": "Örneğin işe alım, kredi/sigorta başvurusu, okul/sınav, polis veya göç işlemleri gibi kişinin hayatını etkileyen bir karar sürecinde kullanılıyor mu?",
+   "focus_terms": [
+    "işe alım",
+    "kredi",
+    "sigorta",
+    "sınav",
+    "kolluk",
+    "göç",
+    "kritik altyapı",
+    "adalet"
+   ],
+   "option_map": {
+    "Hiçbiri": {
+     "annex3_area": "none"
+    },
+    "İşe alım / çalışan yönetimi": {
+     "annex3_area": "employment"
+    },
+    "Kredi / sigorta / temel hizmetler": {
+     "annex3_area": "essential_services"
+    },
+    "Eğitim / sınav": {
+     "annex3_area": "education"
+    },
+    "Bilmiyorum": {
+     "annex3_area": "unknown"
+    }
+   }
+  },
+  {
+   "id": "profiling",
+   "phase": "Kullanım",
+   "title": "Profilleme",
+   "slots": [
+    "profiling"
+   ],
+   "controls": [
+    "C01"
+   ],
+   "critical": true,
+   "priority": 91.5,
+   "hint": "profiling of natural persons always high-risk Annex III",
+   "sources": [
+    "AIA"
+   ],
+   "anchors": [
+    "AIA|Art. 6(3)"
+   ],
+   "default_q": "Bu görevde agent kişileri değerlendirip profil çıkarıyor mu?",
+   "options": [
+    "Evet",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "condition": "annex3_area_set",
+   "simple_q": "Agent bir kişinin kişilik, davranış veya ilgi alanları hakkında otomatik bir değerlendirme/profil çıkarıyor mu?"
+  },
+  {
+   "id": "annex1",
+   "phase": "Kullanım",
+   "title": "Ürün güvenlik bileşeni",
+   "slots": [
+    "annex1_product"
+   ],
+   "controls": [
+    "C01"
+   ],
+   "critical": false,
+   "priority": 74,
+   "hint": "safety component of a product Union harmonisation legislation third-party conformity assessment",
+   "sources": [
+    "AIA"
+   ],
+   "anchors": [
+    "AIA|Art. 6(1)"
+   ],
+   "default_q": "Agent, tıbbi cihaz, makine veya oyuncak gibi bir ürünün güvenlik bileşeni mi ya da ürünün kendisi mi?",
+   "options": [
+    "Evet",
+    "Hayır",
+    "Bilmiyorum"
+   ]
+  },
+  {
+   "id": "action_mode",
+   "phase": "Yetki ve etki",
+   "title": "İşlem yetkisi",
+   "slots": [
+    "action_mode",
+    "tools_summary"
+   ],
+   "controls": [
+    "C11"
+   ],
+   "critical": true,
+   "priority": 93,
+   "hint": "agent tools access permissions actions autonomy latitude",
+   "sources": [
+    "TAI-AG",
+    "NIST-PB"
+   ],
+   "anchors": [
+    "TAI-AG|s. 6",
+    "TAI-AG|s. 20"
+   ],
+   "default_q": "Agent kendi başına ne yapabiliyor? Yalnızca bilgi/öneri mi veriyor, taslak mı hazırlıyor, yoksa gerçekten işlem de yapıyor mu (ör. e-posta göndermek, ödeme/sipariş vermek, kayıt değiştirmek)?",
+   "options": [
+    "Yalnız bilgi verir",
+    "Öneri verir, insan uygular",
+    "Taslak hazırlar, insan gönderir",
+    "İşlemi onaydan sonra yapar",
+    "Onaysız işlem yapar",
+    "Başka bir şey",
+    "Bilmiyorum"
+   ],
+   "simple_q": "Örneğin agent kendi başına e-posta gönderebiliyor, ödeme yapabiliyor veya bir kaydı değiştirebiliyor mu, yoksa yalnızca bir insan için öneri mi hazırlıyor?",
+   "focus_terms": [
+    "işlem yap"
+   ],
+   "option_map": {
+    "Yalnız bilgi verir": {
+     "action_mode": "info_only"
+    },
+    "Öneri verir, insan uygular": {
+     "action_mode": "recommend"
+    },
+    "Taslak hazırlar, insan gönderir": {
+     "action_mode": "draft"
+    },
+    "İşlemi onaydan sonra yapar": {
+     "action_mode": "approved_action"
+    },
+    "Onaysız işlem yapar": {
+     "action_mode": "envelope_action"
+    },
+    "Bilmiyorum": {
+     "action_mode": "unknown"
+    }
+   }
+  },
+  {
+   "id": "review_basis",
+   "phase": "Yetki ve etki",
+   "title": "Önerinin gözden geçirilmesi",
+   "slots": [
+    "human_review"
+   ],
+   "controls": [
+    "C09"
+   ],
+   "critical": false,
+   "priority": 81,
+   "hint": "human oversight reviewers understand outputs automation bias ability to override",
+   "sources": [
+    "TAI-AG",
+    "AIA",
+    "NIST-PB"
+   ],
+   "anchors": [
+    "TAI-AG|s. 10",
+    "AIA|Art. 14(4)",
+    "NIST-PB|MAP 3.5"
+   ],
+   "default_q": "Karar veren çalışan, agentın önerisinin hangi bilgilere dayandığını görebiliyor mu?",
+   "options": [
+    "Evet, dayanağı görebilir",
+    "Kısmen",
+    "Hayır, yalnız sonucu görür",
+    "Bilmiyorum"
+   ],
+   "condition": "recommends",
+   "focus_terms": [
+    "gerekçe",
+    "dayandığını"
+   ],
+   "context": true,
+   "option_map": {
+    "Evet, dayanağı görebilir": {
+     "human_review": "yes"
+    },
+    "Kısmen": {
+     "human_review": "partial"
+    },
+    "Hayır, yalnız sonucu görür": {
+     "human_review": "no"
+    },
+    "Bilmiyorum": {
+     "human_review": "unknown"
+    }
+   }
+  },
+  {
+   "id": "approval_exists",
+   "phase": "Yetki ve etki",
+   "title": "İnsan onayı var mı",
+   "slots": [
+    "approval_exists"
+   ],
+   "controls": [
+    "C09"
+   ],
+   "critical": true,
+   "priority": 85,
+   "condition": "acts",
+   "hint": "human approval before actions oversight intervention",
+   "sources": [
+    "TAI-AG",
+    "NIST-PB",
+    "AIA"
+   ],
+   "anchors": [
+    "TAI-AG|s. 10",
+    "NIST-PB|MAP 3.5"
+   ],
+   "default_q": "Agent işlem yapmadan önce bir insanın onayı alınıyor mu?",
+   "options": [
+    "Evet",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "simple_q": "Örneğin ödeme, e-posta gönderme veya kayıt değiştirme gibi bir işlemden önce biri 'onayla' butonuna basıyor mu?",
+   "focus_terms": [
+    "onayı alınıyor"
+   ]
+  },
+  {
+   "id": "approval_bound",
+   "phase": "Yetki ve etki",
+   "title": "İşleme özel onay",
+   "slots": [
+    "approval_bound"
+   ],
+   "controls": [
+    "C09"
+   ],
+   "critical": true,
+   "priority": 84,
+   "hint": "human approval before actions bound to the specific action oversight intervention",
+   "sources": [
+    "TAI-AG",
+    "NIST-PB",
+    "AIA"
+   ],
+   "anchors": [
+    "TAI-AG|s. 10",
+    "TAI-AG|s. 20",
+    "NIST-PB|MAP 3.5"
+   ],
+   "default_q": "Bu onay yalnızca o işleme mi özel (tutar, alıcı gibi ayrıntılar tek tek onaylanıyor mu), yoksa genel/toplu bir onay mı?",
+   "options": [
+    "Evet, o işleme özel",
+    "Hayır, genel/toplu onay",
+    "Kısmen",
+    "Bilmiyorum"
+   ],
+   "condition": "approval_exists_yes",
+   "simple_q": "Örneğin onaylayan kişi her seferinde tutarı ve alıcıyı görüp onaylıyor mu, yoksa tek seferlik genel bir izin mi verilmiş?",
+   "option_map": {
+    "Evet, o işleme özel": {
+     "approval_bound": "yes"
+    },
+    "Hayır, genel/toplu onay": {
+     "approval_bound": "no"
+    },
+    "Kısmen": {
+     "approval_bound": "partial"
+    },
+    "Bilmiyorum": {
+     "approval_bound": "unknown"
+    }
+   }
+  },
+  {
+   "id": "limits_enforced",
+   "phase": "Yetki ve etki",
+   "title": "Sınırların uygulanması",
+   "slots": [
+    "limits_enforced"
+   ],
+   "controls": [
+    "C11"
+   ],
+   "critical": true,
+   "priority": 83,
+   "hint": "permission limits allowlist enforced technically tools scope budget caps",
+   "sources": [
+    "TAI-AG",
+    "NIST-PB"
+   ],
+   "anchors": [
+    "TAI-AG|s. 6",
+    "TAI-AG|s. 27"
+   ],
+   "default_q": "Agentın işlem sınırları (tutar, kapsam, erişilebilen sistemler) sistemde teknik olarak mı uygulanıyor, yoksa yalnız talimatla mı belirtiliyor?",
+   "options": [
+    "Teknik olarak uygulanıyor",
+    "Yalnız talimat/politika",
+    "Sınır yok",
+    "Bilmiyorum"
+   ],
+   "condition": "acts",
+   "simple_q": "Örneğin tutar üst sınırı sistemde kodla engelleniyor mu, yoksa agenta 'şu kadarını geçme' diye yazılmış bir talimat mı var?",
+   "option_map": {
+    "Teknik olarak uygulanıyor": {
+     "limits_enforced": "technical"
+    },
+    "Yalnız talimat/politika": {
+     "limits_enforced": "policy_only"
+    },
+    "Sınır yok": {
+     "limits_enforced": "none"
+    },
+    "Bilmiyorum": {
+     "limits_enforced": "unknown"
+    }
+   }
+  },
+  {
+   "id": "authority_expansion",
+   "phase": "Yetki ve etki",
+   "title": "Yetki genişletme",
+   "slots": [
+    "authority_expansion"
+   ],
+   "controls": [
+    "C11"
+   ],
+   "critical": true,
+   "priority": 82,
+   "hint": "authority expansion privilege escalation delegation ceiling dynamic permissions",
+   "sources": [
+    "TAI-AG",
+    "NIST-PB"
+   ],
+   "anchors": [
+    "TAI-AG|s. 14",
+    "TAI-AG|s. 16"
+   ],
+   "default_q": "Agent görevi sırasında kendi yetkisini veya erişimini kendisi genişletebiliyor mu?",
+   "options": [
+    "Evet",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "condition": "acts",
+   "simple_q": "Örneğin agent görevi için kendine yeni bir araç, izin veya erişim ekleyebiliyor mu?"
+  },
+  {
+   "id": "delegation",
+   "phase": "Yetki ve etki",
+   "title": "Başka agentlara devir",
+   "slots": [
+    "delegates_to_agents"
+   ],
+   "controls": [
+    "C11"
+   ],
+   "critical": false,
+   "priority": 60,
+   "hint": "multi-agent delegation orchestrator subagents accountability",
+   "sources": [
+    "TAI-AG"
+   ],
+   "anchors": [
+    "TAI-AG|s. 14",
+    "TAI-AG|s. 16"
+   ],
+   "default_q": "Agent işlerin bir kısmını başka agentlara veya otomatik araçlara devrediyor mu?",
+   "options": [
+    "Evet",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "condition": "acts"
+  },
+  {
+   "id": "max_harm",
+   "phase": "Yetki ve etki",
+   "title": "Makul en kötü zarar",
+   "slots": [
+    "max_harm",
+    "harm_desc"
+   ],
+   "controls": [
+    "C04",
+    "C05"
+   ],
+   "critical": true,
+   "priority": 90,
+   "hint": "risk of harm to health safety fundamental rights severity of harm",
+   "sources": [
+    "TAI-AG",
+    "AIA",
+    "NIST-PB"
+   ],
+   "anchors": [
+    "TAI-AG|s. 4",
+    "AIA|Art. 9(2)",
+    "NIST-PB|MAP 5.1"
+   ],
+   "default_q": "Agent hata yaptığında ortaya çıkabilecek en kötü makul sonuç nedir (para kaybı, mahremiyet ihlali, hak kaybı, güvenlik)?",
+   "options": [
+    "Önemsiz / kolay düzeltilir",
+    "Sınırlı zarar",
+    "Ciddi zarar",
+    "Çok ağır (güvenlik / temel haklar)",
+    "Bilmiyorum"
+   ],
+   "simple_q": "Agent yanlış bir şey önerir veya yaparsa olabilecek en kötü sonuç ne olurdu: küçük bir düzeltme mi, parasal kayıp mı, ciddi hak kaybı mı?",
+   "focus_terms": [
+    "en kötü"
+   ],
+   "option_map": {
+    "Önemsiz / kolay düzeltilir": {
+     "max_harm": "minimal"
+    },
+    "Sınırlı zarar": {
+     "max_harm": "limited"
+    },
+    "Ciddi zarar": {
+     "max_harm": "serious"
+    },
+    "Çok ağır (güvenlik / temel haklar)": {
+     "max_harm": "critical"
+    },
+    "Bilmiyorum": {
+     "max_harm": "unknown"
+    }
+   }
+  },
+  {
+   "id": "reversibility",
+   "phase": "Yetki ve etki",
+   "title": "Geri alınabilirlik",
+   "slots": [
+    "reversibility"
+   ],
+   "controls": [
+    "C04"
+   ],
+   "critical": false,
+   "priority": 52,
+   "hint": "reversibility of actions irreversible consequences",
+   "sources": [
+    "TAI-AG",
+    "NIST-PB"
+   ],
+   "anchors": [
+    "TAI-AG|s. 4",
+    "TAI-AG|s. 30"
+   ],
+   "default_q": "Yanlış bir sonuç veya öneri fark edilirse düzeltilebiliyor mu?",
+   "options": [
+    "Kolayca düzeltilebilir",
+    "Kısmen düzeltilebilir",
+    "Hayır, geri alınamaz",
+    "Bilmiyorum"
+   ],
+   "condition": "harm_known",
+   "focus_terms": [
+    "düzeltilebil"
+   ],
+   "option_map": {
+    "Kolayca düzeltilebilir": {
+     "reversibility": "reversible"
+    },
+    "Kısmen düzeltilebilir": {
+     "reversibility": "partly"
+    },
+    "Hayır, geri alınamaz": {
+     "reversibility": "irreversible"
+    },
+    "Bilmiyorum": {
+     "reversibility": "unknown"
+    }
+   },
+   "context": true
+  },
+  {
+   "id": "reach",
+   "phase": "Yetki ve etki",
+   "title": "Yayılım",
+   "slots": [
+    "reach"
+   ],
+   "controls": [
+    "C05"
+   ],
+   "critical": false,
+   "priority": 50,
+   "hint": "scale reach number of persons affected speed",
+   "sources": [
+    "TAI-AG",
+    "NIST-PB"
+   ],
+   "anchors": [
+    "TAI-AG|s. 30"
+   ],
+   "default_q": "Böyle bir hatadan etkilenebilecek kişi sayısı nedir?",
+   "options": [
+    "Tek kişi/birim",
+    "Bir grup",
+    "Çok sayıda kişi",
+    "Bilmiyorum"
+   ],
+   "condition": "harm_known",
+   "focus_terms": [
+    "kaç kişi",
+    "etkilenebilecek kişi"
+   ],
+   "option_map": {
+    "Tek kişi/birim": {
+     "reach": "single"
+    },
+    "Bir grup": {
+     "reach": "group"
+    },
+    "Çok sayıda kişi": {
+     "reach": "wide"
+    },
+    "Bilmiyorum": {
+     "reach": "unknown"
+    }
+   }
+  },
+  {
+   "id": "personal_data",
+   "phase": "Kullanım",
+   "title": "Kişisel veri",
+   "slots": [
+    "personal_data"
+   ],
+   "controls": [
+    "C06"
+   ],
+   "critical": false,
+   "priority": 62,
+   "hint": "data and data governance personal data special categories",
+   "sources": [
+    "AIA"
+   ],
+   "anchors": [
+    "AIA|Art. 10(1)"
+   ],
+   "default_q": "Agent hangi tür kişisel verilerle çalışıyor?",
+   "options": [
+    "Kişisel veri yok",
+    "Sıradan kişisel veri (ad, iletişim, sipariş geçmişi gibi)",
+    "Hassas veri de var (sağlık, din, etnik köken gibi)",
+    "Bilmiyorum"
+   ],
+   "focus_terms": [
+    "kişisel veri"
+   ],
+   "option_map": {
+    "Kişisel veri yok": {
+     "personal_data": "none"
+    },
+    "Sıradan kişisel veri (ad, iletişim, sipariş geçmişi gibi)": {
+     "personal_data": "ordinary"
+    },
+    "Hassas veri de var (sağlık, din, etnik köken gibi)": {
+     "personal_data": "special"
+    },
+    "Bilmiyorum": {
+     "personal_data": "unknown"
+    }
+   }
+  },
+  {
+   "id": "vulnerable_groups",
+   "phase": "Kullanım",
+   "title": "Korunmasız gruplar",
+   "slots": [
+    "vulnerable_groups"
+   ],
+   "controls": [
+    "C05"
+   ],
+   "critical": false,
+   "priority": 53,
+   "hint": "vulnerable groups children elderly persons with disabilities adverse impact",
+   "sources": [
+    "AIA",
+    "NIST-PB"
+   ],
+   "anchors": [
+    "AIA|Art. 9(9)"
+   ],
+   "default_q": "Agentın kararlarından çocuk, yaşlı veya engelli bireyler gibi korunmasız gruplar etkilenebilir mi?",
+   "options": [
+    "Evet",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "condition": "personal_data_set",
+   "focus_terms": [
+    "çocuk",
+    "yaşlı",
+    "engelli"
+   ]
+  },
+  {
+   "id": "t_interacts",
+   "phase": "Kullanım",
+   "title": "İnsanlarla doğrudan etkileşim",
+   "slots": [
+    "t_interacts_people"
+   ],
+   "controls": [
+    "C16"
+   ],
+   "critical": false,
+   "priority": 56,
+   "hint": "AI systems intended to interact directly with natural persons informed they are interacting with an AI system",
+   "sources": [
+    "AIA"
+   ],
+   "anchors": [
+    "AIA|Art. 50(1)"
+   ],
+   "default_q": "Agent bir kişiyle (müşteri, çalışan vb.) doğrudan konuşuyor veya mesajlaşıyor mu?",
+   "options": [
+    "Evet",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "focus_terms": [
+    "doğrudan konuş",
+    "mesajlaş"
+   ],
+   "context": true
+  },
+  {
+   "id": "t_synthetic",
+   "phase": "Kullanım",
+   "title": "İçerik üretimi",
+   "slots": [
+    "t_synthetic_content"
+   ],
+   "controls": [
+    "C16"
+   ],
+   "critical": false,
+   "priority": 54,
+   "hint": "synthetic audio image video or text content marked machine-readable format",
+   "sources": [
+    "AIA"
+   ],
+   "anchors": [
+    "AIA|Art. 50(2)"
+   ],
+   "default_q": "Agent ses, görüntü, video veya yayımlanacak metin gibi içerik üretiyor mu?",
+   "options": [
+    "Evet",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "focus_terms": [
+    "içerik üret",
+    "video"
+   ]
+  },
+  {
+   "id": "t_deepfake",
+   "phase": "Kullanım",
+   "title": "Gerçek kişi/olay gibi içerik",
+   "slots": [
+    "t_deepfake_public_text"
+   ],
+   "controls": [
+    "C16"
+   ],
+   "critical": false,
+   "priority": 45,
+   "hint": "deep fake disclose artificially generated or manipulated text published to inform the public",
+   "sources": [
+    "AIA"
+   ],
+   "anchors": [
+    "AIA|Art. 50(4)"
+   ],
+   "default_q": "Ürettiği içerik gerçek bir kişi veya olay gibi görünebiliyor ya da kamuya bilgi vermek için yayımlanıyor mu?",
+   "options": [
+    "Evet",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "condition": "synthetic_yes"
+  },
+  {
+   "id": "ctl_owner",
+   "phase": "Yetki ve etki",
+   "title": "Sorumlu sahip",
+   "slots": [],
+   "controls": [
+    "C03"
+   ],
+   "critical": false,
+   "priority": 30,
+   "hint": "accountability responsible owner roles AI literacy",
+   "sources": [
+    "NIST-PB",
+    "AIA",
+    "TAI-GOV"
+   ],
+   "anchors": [
+    "NIST-PB|GOVERN 2.1",
+    "AIA|Art. 4"
+   ],
+   "default_q": "Bu sistemin sorumlu sahibi olarak adlandırılmış bir kişi var mı?",
+   "options": [
+    "Evet",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "asked": false
+  },
+  {
+   "id": "ctl_risk",
+   "phase": "Yetki ve etki",
+   "title": "Yazılı risk/etki değerlendirmesi",
+   "slots": [],
+   "controls": [
+    "C04",
+    "C05"
+   ],
+   "critical": false,
+   "priority": 29,
+   "hint": "risk management system impact assessment documented",
+   "sources": [
+    "NIST-PB",
+    "AIA"
+   ],
+   "anchors": [
+    "NIST-PB|MAP 5.1",
+    "AIA|Art. 9(2)"
+   ],
+   "default_q": "Bu kullanım için yazılı bir risk değerlendirmesi yapıldı mı?",
+   "options": [
+    "Evet",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "asked": false
+  },
+  {
+   "id": "ctl_logging",
+   "phase": "Yetki ve etki",
+   "title": "Kayıt tutma",
+   "slots": [],
+   "controls": [
+    "C08"
+   ],
+   "critical": false,
+   "priority": 28,
+   "hint": "logging trajectory logs record-keeping traceability",
+   "sources": [
+    "TAI-AG",
+    "AIA"
+   ],
+   "anchors": [
+    "TAI-AG|s. 13",
+    "AIA|Art. 12(1)"
+   ],
+   "default_q": "Agentın yaptığı işlemler ve önerileri sonradan izlenebilecek şekilde kaydediliyor mu?",
+   "options": [
+    "Evet",
+    "Kısmen",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "asked": false
+  },
+  {
+   "id": "ctl_monitoring",
+   "phase": "Yetki ve etki",
+   "title": "İzleme ve olay yönetimi",
+   "slots": [],
+   "controls": [
+    "C18"
+   ],
+   "critical": false,
+   "priority": 27,
+   "hint": "post-deployment monitoring incident response reporting",
+   "sources": [
+    "NIST-PB",
+    "AIA"
+   ],
+   "anchors": [
+    "NIST-PB|MANAGE 4.1",
+    "NIST-PB|GOVERN 4.3"
+   ],
+   "default_q": "Agentın canlı davranışını izleyen biri var mı?",
+   "options": [
+    "Evet, ikisi de",
+    "Biri var",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "asked": false
+  },
+  {
+   "id": "ctl_docs",
+   "phase": "Yetki ve etki",
+   "title": "Dokümantasyon",
+   "slots": [],
+   "controls": [
+    "C06",
+    "C07"
+   ],
+   "critical": false,
+   "priority": 26,
+   "hint": "technical documentation instructions for use data provenance",
+   "sources": [
+    "AIA",
+    "NIST-PB"
+   ],
+   "anchors": [
+    "AIA|Art. 11(1)"
+   ],
+   "default_q": "Agentın nasıl çalıştığını ve sınırlarını anlatan güncel bir doküman var mı?",
+   "options": [
+    "Evet",
+    "Eski / eksik",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "asked": false
+  },
+  {
+   "id": "ctl_external",
+   "phase": "Yetki ve etki",
+   "title": "Dış içerik ve bellek",
+   "slots": [],
+   "controls": [
+    "C12",
+    "C13"
+   ],
+   "critical": false,
+   "priority": 25,
+   "hint": "prompt injection indirect instructions untrusted content memory poisoning",
+   "sources": [
+    "TAI-AG",
+    "AIA"
+   ],
+   "anchors": [
+    "TAI-AG|s. 9"
+   ],
+   "default_q": "Agent web sayfası, e-posta veya belge gibi dış içerik okuyor mu; okuyorsa bu içeriğin agentı yönlendirmemesi için bir önlem var mı?",
+   "options": [
+    "Okumuyor",
+    "Okuyor, önlem var",
+    "Okuyor, önlem yok",
+    "Bilmiyorum"
+   ],
+   "condition": "acts_or_reads",
+   "asked": false
+  },
+  {
+   "id": "ctl_budget",
+   "phase": "Yetki ve etki",
+   "title": "Döngü ve bütçe sınırı",
+   "slots": [],
+   "controls": [
+    "C14"
+   ],
+   "critical": false,
+   "priority": 24,
+   "hint": "stop conditions iteration budget caps loops cascading failure",
+   "sources": [
+    "TAI-AG"
+   ],
+   "anchors": [
+    "TAI-AG|s. 27"
+   ],
+   "default_q": "Agentın sonsuz döngüye girmemesi için adım, süre veya bütçe sınırı var mı?",
+   "options": [
+    "Evet",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "condition": "acts",
+   "asked": false
+  },
+  {
+   "id": "ctl_supplier",
+   "phase": "Yetki ve etki",
+   "title": "Tedarikçi ve değişiklik",
+   "slots": [],
+   "controls": [
+    "C15"
+   ],
+   "critical": false,
+   "priority": 23,
+   "hint": "third-party suppliers change control reassessment after changes",
+   "sources": [
+    "NIST-PB",
+    "AIA"
+   ],
+   "anchors": [
+    "NIST-PB|GOVERN 6.1",
+    "AIA|Art. 25(1)"
+   ],
+   "default_q": "Sistem üçüncü taraf bir model veya araç kullanıyor mu?",
+   "options": [
+    "Evet, süreç var",
+    "Kullanıyor, süreç yok",
+    "Kullanmıyor",
+    "Bilmiyorum"
+   ],
+   "asked": false
+  },
+  {
+   "id": "ctl_conformity",
+   "phase": "Yetki ve etki",
+   "title": "Uygunluk faaliyetleri",
+   "slots": [],
+   "controls": [
+    "C20"
+   ],
+   "critical": false,
+   "priority": 22,
+   "hint": "conformity assessment registration quality management system",
+   "sources": [
+    "AIA"
+   ],
+   "anchors": [
+    "AIA|Art. 43(1)",
+    "AIA|Art. 17(1)"
+   ],
+   "default_q": "Yüksek riskli kullanım için uygunluk değerlendirmesi ve kayıt süreçleri planlandı mı?",
+   "options": [
+    "Evet",
+    "Kısmen",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "condition": "legal_high_or_unknown",
+   "asked": false
+  },
+  {
+   "id": "ctl_transparency",
+   "phase": "Kullanım",
+   "title": "Kullanıcı bilgilendirmesi",
+   "slots": [],
+   "controls": [
+    "C16"
+   ],
+   "critical": false,
+   "priority": 21,
+   "hint": "transparency obligations inform persons interacting with an AI system synthetic content disclosure",
+   "sources": [
+    "AIA",
+    "TAI-GOV"
+   ],
+   "anchors": [
+    "AIA|Art. 50(1)",
+    "AIA|Art. 50(2)"
+   ],
+   "default_q": "Kullanıcılar, bir yapay zekâ ile etkileşimde olduklarını veya içeriğin yapay zekâ ile üretildiğini biliyor mu (örneğin ekranda belirtiliyor mu)?",
+   "options": [
+    "Evet, belirtiliyor",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "asked": false
+  },
+  {
+   "id": "eval_criteria",
+   "phase": "Kullanım",
+   "title": "Puanın ölçütleri",
+   "slots": [
+    "eval_uses_social_traits",
+    "eval_predicts_crime"
+   ],
+   "controls": [
+    "C02"
+   ],
+   "critical": true,
+   "priority": 85,
+   "condition": "person_eval_yes",
+   "hint": "evaluation or classification of natural persons social behaviour personal characteristics criminal offence risk assessment profiling",
+   "sources": [
+    "AIA"
+   ],
+   "anchors": [
+    "AIA|Art. 5(1)(c)",
+    "AIA|Art. 5(1)(d)"
+   ],
+   "default_q": "Verilen puan veya değerlendirme hangi ölçütlere ve verilere göre hesaplanıyor?",
+   "simple_q": "Bu değerlendirmede sosyal medya, genel davranış veya kişilik analizi gibi veriler ya da suç/dolandırıcılık riski tahmini de yer alıyor mu?",
+   "focus_terms": [
+    "ölçüt",
+    "hangi verilere"
+   ],
+   "open": true,
+   "simple_options": [
+    "Hayır, ikisi de yok",
+    "Evet, sosyal davranış veya kişilik verisi var",
+    "Evet, suç veya dolandırıcılık riski değerlendiriliyor",
+    "Bilmiyorum"
+   ],
+   "simple_option_map": {
+    "Hayır, ikisi de yok": {
+     "eval_uses_social_traits": "no",
+     "eval_predicts_crime": "no"
+    },
+    "Evet, sosyal davranış veya kişilik verisi var": {
+     "eval_uses_social_traits": "yes"
+    },
+    "Evet, suç veya dolandırıcılık riski değerlendiriliyor": {
+     "eval_predicts_crime": "yes"
+    },
+    "Bilmiyorum": {
+     "eval_uses_social_traits": "unknown",
+     "eval_predicts_crime": "unknown"
+    }
+   }
+  },
+  {
+   "id": "stop_ability",
+   "phase": "Yetki ve etki",
+   "title": "Durdurabilme",
+   "slots": [
+    "can_stop"
+   ],
+   "controls": [
+    "C09"
+   ],
+   "critical": false,
+   "priority": 70,
+   "context": true,
+   "condition": "acts",
+   "hint": "stop kill switch halt intervention human oversight",
+   "sources": [
+    "TAI-AG",
+    "NIST-PB",
+    "AIA"
+   ],
+   "anchors": [
+    "TAI-AG|s. 27",
+    "NIST-PB|MANAGE 2.4",
+    "AIA|Art. 14(4)"
+   ],
+   "default_q": "Bir hata fark edilirse biri agentı hemen durdurabiliyor mu?",
+   "options": [
+    "Evet",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "focus_terms": [
+    "durdurabil"
+   ]
+  },
+  {
+   "id": "rollback_ability",
+   "phase": "Yetki ve etki",
+   "title": "Geri alabilme",
+   "slots": [
+    "can_rollback"
+   ],
+   "controls": [
+    "C19"
+   ],
+   "critical": false,
+   "priority": 69,
+   "context": true,
+   "condition": "acts",
+   "hint": "rollback recovery reversibility of actions incident",
+   "sources": [
+    "TAI-AG",
+    "NIST-PB"
+   ],
+   "anchors": [
+    "TAI-AG|s. 27",
+    "TAI-AG|s. 4"
+   ],
+   "default_q": "Agentın yaptığı bir işlem hatalıysa geri alınabiliyor mu?",
+   "options": [
+    "Evet",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "focus_terms": [
+    "geri alınabil"
+   ]
+  },
+  {
+   "id": "reexam",
+   "phase": "Yetki ve etki",
+   "title": "İnsan yeniden incelemesi",
+   "slots": [
+    "human_reexam"
+   ],
+   "controls": [
+    "C09"
+   ],
+   "critical": false,
+   "priority": 80,
+   "context": true,
+   "hint": "human oversight review of outputs contestability affected persons ability to override",
+   "sources": [
+    "TAI-AG",
+    "AIA",
+    "NIST-PB"
+   ],
+   "anchors": [
+    "TAI-AG|s. 10",
+    "AIA|Art. 14(4)"
+   ],
+   "default_q": "Agentın sonucundan olumsuz etkilenen birinin (ör. elenen bir başvuru, reddedilen bir talep) dosyasını bir insan yeniden inceleyebiliyor mu?",
+   "options": [
+    "Evet",
+    "Kısmen",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "option_map": {
+    "Evet": {
+     "human_reexam": "yes"
+    },
+    "Kısmen": {
+     "human_reexam": "partial"
+    },
+    "Hayır": {
+     "human_reexam": "no"
+    },
+    "Bilmiyorum": {
+     "human_reexam": "unknown"
+    }
+   },
+   "focus_terms": [
+    "yeniden inceleyebil"
+   ]
+  },
+  {
+   "phase": "Kullanım",
+   "controls": [
+    "C01"
+   ],
+   "critical": true,
+   "condition": "annex3_area_set",
+   "sources": [
+    "AIA"
+   ],
+   "anchors": [
+    "AIA|Art. 6(3)",
+    "AIA|Art. 6(4)"
+   ],
+   "id": "art6_role",
+   "title": "Agentın görev türü",
+   "slots": [
+    "art6_3_exception"
+   ],
+   "priority": 91,
+   "hint": "not high-risk narrow procedural task preparatory task improve result of previously completed human activity detect decision-making patterns",
+   "default_q": "Agentın görevi şunlardan hangisine en yakın?",
+   "options": [
+    "Dar bir prosedür adımı (ör. biçim veya format kontrolü)",
+    "Daha önce insanın tamamladığı bir işi iyileştirmek",
+    "Karar kalıplarını tespit etmek (insan değerlendirmesinin yerini almadan)",
+    "İnsanın yapacağı değerlendirmeye hazırlık",
+    "Bunların hiçbiri",
+    "Bilmiyorum"
+   ],
+   "option_map": {
+    "Dar bir prosedür adımı (ör. biçim veya format kontrolü)": {
+     "art6_3_exception": "narrow_procedural"
+    },
+    "Daha önce insanın tamamladığı bir işi iyileştirmek": {
+     "art6_3_exception": "improve_prior_human_work"
+    },
+    "Karar kalıplarını tespit etmek (insan değerlendirmesinin yerini almadan)": {
+     "art6_3_exception": "detect_patterns"
+    },
+    "İnsanın yapacağı değerlendirmeye hazırlık": {
+     "art6_3_exception": "preparatory"
+    },
+    "Bunların hiçbiri": {
+     "art6_3_exception": "none"
+    },
+    "Bilmiyorum": {
+     "art6_3_exception": "unknown"
+    }
+   },
+   "simple_q": "Örneğin agent yalnızca bir formu düzenliyor/özetliyor mu, yoksa bir kişi hakkında değerlendirme veya puan mı üretiyor?",
+   "focus_terms": [
+    "en yakın"
+   ]
+  },
+  {
+   "phase": "Kullanım",
+   "controls": [
+    "C01"
+   ],
+   "critical": true,
+   "condition": "annex3_area_set",
+   "sources": [
+    "AIA"
+   ],
+   "anchors": [
+    "AIA|Art. 6(3)",
+    "AIA|Art. 6(4)"
+   ],
+   "id": "art6_influence",
+   "title": "Kararı yönlendirme",
+   "slots": [
+    "influences_decision"
+   ],
+   "priority": 90.5,
+   "hint": "does not materially influence the outcome of decision making",
+   "default_q": "Agentın çıktısı, insanın vereceği kararı fiilen yönlendiriyor mu?",
+   "options": [
+    "Evet",
+    "Hayır",
+    "Bilmiyorum"
+   ],
+   "simple_q": "Örneğin karar veren kişi çoğunlukla agentın önerisini olduğu gibi mi uyguluyor?",
+   "focus_terms": [
+    "fiilen yönlendiriyor"
+   ]
+  }
+ ],
+ "equivalences": [
+  {
+   "if": {
+    "annex3_area": "biometrics"
+   },
+   "then": {
+    "g_biometric": "yes"
+   },
+   "reason": "Annex III biyometri alanı seçildi; biyometrik veri kullanımı da beyan edilmiş sayılır."
+  },
+  {
+   "if": {
+    "g_biometric": "no"
+   },
+   "then": {
+    "t_emotion_biometric": "no"
+   },
+   "reason": "Biyometrik veri kullanılmadığı beyan edildi."
+  },
+  {
+   "if": {
+    "t_synthetic_content": "no"
+   },
+   "then": {
+    "t_deepfake_public_text": "no"
+   },
+   "reason": "İçerik üretimi olmadığı beyan edildi."
+  },
+  {
+   "if": {
+    "action_mode": "approved_action"
+   },
+   "then": {
+    "approval_exists": "yes"
+   },
+   "reason": "İşlemi onaydan sonra yaptığı beyan edildi."
+  },
+  {
+   "if": {
+    "action_mode": "envelope_action"
+   },
+   "then": {
+    "approval_exists": "no"
+   },
+   "reason": "Her işlem için onay olmadan çalıştığı beyan edildi."
+  },
+  {
+   "if": {
+    "action_mode": "self_expanding"
+   },
+   "then": {
+    "approval_exists": "no"
+   },
+   "reason": "Yetkisini kendisi genişletebildiği beyan edildi."
+  }
+ ],
+ "exclusions": [
+  {
+   "if": {
+    "g_biometric": "no"
+   },
+   "excludes": {
+    "annex3_area": [
+     "biometrics"
+    ]
+   }
+  },
+  {
+   "if": {
+    "approval_exists": "no"
+   },
+   "excludes": {
+    "approval_bound": [
+     "yes",
+     "partial"
+    ]
+   },
+   "question": "Daha önce işlemlerin onay olmadan yapıldığını, sonra onayın işleme özel olduğunu söylediniz. Bu ikisi hangi işlem için geçerli?",
+   "resolve": {
+    "Tüm işlemler işleme özel onayla yapılıyor": {
+     "action_mode": "approved_action",
+     "approval_exists": "yes",
+     "approval_bound": "yes"
+    },
+    "İşlemler onaysız yapılıyor": {
+     "approval_exists": "no",
+     "approval_bound": "no"
+    },
+    "Bazı işlemler onaylı, bazıları onaysız": {
+     "approval_exists": "unknown",
+     "approval_bound": "unknown"
+    },
+    "Bilmiyorum": {
+     "approval_exists": "unknown",
+     "approval_bound": "unknown"
+    }
+   }
+  },
+  {
+   "if": {
+    "action_mode": "envelope_action"
+   },
+   "excludes": {
+    "approval_bound": [
+     "yes"
+    ]
+   },
+   "question": "Daha önce işlemlerin onay olmadan yapıldığını, sonra onayın işleme özel olduğunu söylediniz. Bu ikisi hangi işlem için geçerli?",
+   "resolve": {
+    "Tüm işlemler işleme özel onayla yapılıyor": {
+     "action_mode": "approved_action",
+     "approval_exists": "yes",
+     "approval_bound": "yes"
+    },
+    "İşlemler onaysız yapılıyor": {
+     "approval_exists": "no",
+     "approval_bound": "no"
+    },
+    "Bazı işlemler onaylı, bazıları onaysız": {
+     "approval_exists": "unknown",
+     "approval_bound": "unknown"
+    },
+    "Bilmiyorum": {
+     "approval_exists": "unknown",
+     "approval_bound": "unknown"
+    }
+   }
+  },
+  {
+   "if": {
+    "action_mode": "self_expanding"
+   },
+   "excludes": {
+    "approval_bound": [
+     "yes"
+    ]
+   },
+   "question": "Daha önce işlemlerin onay olmadan yapıldığını, sonra onayın işleme özel olduğunu söylediniz. Bu ikisi hangi işlem için geçerli?",
+   "resolve": {
+    "Tüm işlemler işleme özel onayla yapılıyor": {
+     "action_mode": "approved_action",
+     "approval_exists": "yes",
+     "approval_bound": "yes"
+    },
+    "İşlemler onaysız yapılıyor": {
+     "approval_exists": "no",
+     "approval_bound": "no"
+    },
+    "Bazı işlemler onaylı, bazıları onaysız": {
+     "approval_exists": "unknown",
+     "approval_bound": "unknown"
+    },
+    "Bilmiyorum": {
+     "approval_exists": "unknown",
+     "approval_bound": "unknown"
+    }
+   }
+  },
+  {
+   "if": {
+    "action_mode": "approved_action"
+   },
+   "excludes": {
+    "approval_exists": [
+     "no"
+    ]
+   },
+   "question": "Daha önce işlemlerin onay olmadan yapıldığını, sonra onayın işleme özel olduğunu söylediniz. Bu ikisi hangi işlem için geçerli?",
+   "resolve": {
+    "Tüm işlemler işleme özel onayla yapılıyor": {
+     "action_mode": "approved_action",
+     "approval_exists": "yes",
+     "approval_bound": "yes"
+    },
+    "İşlemler onaysız yapılıyor": {
+     "approval_exists": "no",
+     "approval_bound": "no"
+    },
+    "Bazı işlemler onaylı, bazıları onaysız": {
+     "approval_exists": "unknown",
+     "approval_bound": "unknown"
+    },
+    "Bilmiyorum": {
+     "approval_exists": "unknown",
+     "approval_bound": "unknown"
+    }
+   }
+  }
+ ],
+ "prohibition_groups": {
+  "influence": {
+   "deps": [
+    "p_manipulation",
+    "p_exploit_vulnerability"
+   ],
+   "requires": {
+    "g_influence": "yes"
+   },
+   "anchors": [
+    "AIA|Art. 5(1)(a)",
+    "AIA|Art. 5(1)(b)"
+   ],
+   "skip_tr": "Kullanıcıları belirli bir davranışa yönlendirme amacı olmadığı beyan edildi; manipülasyon ve zayıflık sömürüsü alt taramaları atlandı.",
+   "detail_q": "Agent, kullanıcıların davranışını nasıl etkilemeyi amaçlıyor?",
+   "detail_options": [
+    "Açık ve anlaşılır bir öneri/teklifle",
+    "Kullanıcının farkında olmayacağı yöntemlerle",
+    "Yaş, engel veya maddi durum gibi zayıflıkları dikkate alarak",
+    "Bilmiyorum"
+   ]
+  },
+  "social": {
+   "deps": [
+    "p_social_scoring"
+   ],
+   "requires": {
+    "g_person_eval": "yes",
+    "eval_uses_social_traits": "yes"
+   },
+   "anchors": [
+    "AIA|Art. 5(1)(c)"
+   ],
+   "skip_tr": "Puan/değerlendirmenin sosyal davranış veya kişilik verisine dayanmadığı (ya da puan verilmediği) beyan edildi; sosyal puanlama alt taraması atlandı.",
+   "detail_q": "Bu sosyal davranış/kişilik verisine dayanan puan, verilerin toplandığı bağlamdan farklı bir alanda mı kullanılıyor, ya da kişiler için orantısız veya haksız olumsuz sonuç doğurabilir mi?",
+   "detail_options": [
+    "Hayır, aynı bağlamda ve gerekçeli kullanılıyor",
+    "Evet, verinin toplandığı bağlamdan farklı alanda kullanılıyor",
+    "Evet, orantısız veya haksız olumsuz sonuç doğurabilir",
+    "Bilmiyorum"
+   ]
+  },
+  "crime": {
+   "deps": [
+    "p_crime_profiling"
+   ],
+   "requires": {
+    "g_person_eval": "yes",
+    "eval_predicts_crime": "yes"
+   },
+   "anchors": [
+    "AIA|Art. 5(1)(d)"
+   ],
+   "skip_tr": "Değerlendirmenin suç/dolandırıcılık riski tahmini içermediği (ya da puan verilmediği) beyan edildi; suç riski profilleme alt taraması atlandı.",
+   "detail_q": "Suç veya dolandırıcılık riski değerlendirmesi yalnızca kişinin profiline ya da kişilik özelliklerine mi dayanıyor, yoksa nesnel ve doğrulanabilir olgulara da mı?",
+   "detail_options": [
+    "Yalnızca profile/kişilik özelliklerine",
+    "Nesnel ve doğrulanabilir olgulara da dayanıyor",
+    "Bilmiyorum"
+   ]
+  },
+  "biometric": {
+   "deps": [
+    "p_facial_scraping",
+    "p_emotion_work_edu",
+    "p_biometric_categorisation",
+    "p_rbi_law_enforcement"
+   ],
+   "requires": {
+    "g_biometric": "yes"
+   },
+   "anchors": [
+    "AIA|Art. 5(1)(e)",
+    "AIA|Art. 5(1)(f)",
+    "AIA|Art. 5(1)(g)",
+    "AIA|Art. 5(1)(h)"
+   ],
+   "skip_tr": "Biyometrik veri işlenmediği beyan edildi; yüz görüntüsü toplama, duygu çıkarımı, biyometrik sınıflandırma ve gerçek zamanlı kimliklendirme alt taramaları atlandı.",
+   "detail_q": "Biyometrik veriyi hangi amaçla ve nereden alıyorsunuz?",
+   "detail_options": [
+    "Kişiyi tanımak veya kimliğini doğrulamak için",
+    "Duygu durumunu çıkarmak için",
+    "Irk, din, siyasi görüş gibi özellikleri çıkarmak için",
+    "İnternetten/kameralardan yüz görüntüsü toplamak için",
+    "Başka bir amaçla",
+    "Bilmiyorum"
+   ]
+  }
+ }
+}
