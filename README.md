@@ -17,19 +17,20 @@ cp .env.example .env         # put your OPENAI_API_KEY in .env
 ```
 The chat model and embedding model are selected through environment variables: `OPENAI_MODEL` (default `gpt-4.1-mini`) and `OPENAI_EMBED_MODEL` (default `text-embedding-3-small`). Streamlit secrets are also supported.
 
-## Preparing the source files
-The source PDFs are **not included** in the repository (distribution permission has not been verified). Put your own copies in `sources/` **using these names**:
+## Source files
+The following source PDFs are included in `sources/`:
 
-| File name | Source | Note |
-|---|---|---|
-| `EU_AI_Act_OJ_L_2024_1689.pdf` | Regulation (EU) 2024/1689, OJ L, 12.7.2024 — EUR-Lex | Must be the original 2024 text |
-| `EU_Commission_Decision.pdf` | Commission Implementing Decision (EU) 2026/2274 — Official Journal | Only the harmonised-standard reference |
-| `TrustAI_Agentic_Governance_Playbook.pdf` | TrustAI (2026) | From the TrustAI team |
-| `TrustAI_Governance_Playbook.pdf` | TrustAI (v1.0, 2026) | From the TrustAI team |
-| `AI_RMF_Playbook.pdf` | NIST AI RMF Playbook — airc.nist.gov | |
-| `ISO_42001_2023.pdf` | ISO/IEC 42001:2023 |
+| File name | Source |
+|---|---|
+| `EU_AI_Act_OJ_L_2024_1689.pdf` | Regulation (EU) 2024/1689, OJ L, 12.7.2024 — EUR-Lex (original 2024 text) |
+| `EU_Commission_Decision.pdf` | Commission Implementing Decision (EU) 2026/2274 — Official Journal (only the harmonised-standard reference) |
+| `TrustAI_Agentic_Governance_Playbook.pdf` | TrustAI (2026) |
+| `TrustAI_Governance_Playbook.pdf` | TrustAI (v1.0, 2026) |
+| `AI_RMF_Playbook.pdf` | NIST AI RMF Playbook — airc.nist.gov |
 
-Version and date information is in `catalogs/sources.json`. If the files are missing, the application says so and disables the start button. Source texts are treated as data; instructions inside them are not applied.
+**ISO/IEC 42001:2023 is not included** (copyrighted). If you have a licensed copy you may place it as `sources/ISO_42001_2023.pdf`; it is optional and is never used: it is excluded from the index, prompts and quotations, and is listed only as a bibliographic entry. Check the redistribution terms of the included documents before making this repository public.
+
+Version and date information is in `catalogs/sources.json`. If a file is missing, the application says so and disables the start button. Source texts are treated as data; instructions inside them are not applied.
 
 On first run the passages are extracted locally and written to `.cache/`. The embedding index for semantic search is built **only by an explicit user action** (sidebar → Setup → *Embedding indeksini oluştur*, "Build embedding index"); it has a small one-off API cost. If it is not built, search uses local keyword matching only.
 
@@ -39,7 +40,7 @@ streamlit run app.py
 ```
 In the sidebar, "Değerlendirme ayarları" (assessment settings) lets you change the agent's operating scope (default Türkiye) and its EU link (default *Belirlenmedi*, "not determined"). User answers and reports are kept in the session only and are never written to the repository.
 
-Local checks (the source PDFs must be in `sources/`; no API calls are made): `python -m pytest -q` and `python tools/verify_catalog.py`.
+Local checks (no API calls are made): `python -m pytest -q` and `python tools/verify_catalog.py`.
 
 ## Structure
 `app.py` UI · `interview.py` interview (one model call per answer) · `planner.py` question selection and finishing (no model) · `classify.py` state derivation and classification · `rag.py` extraction / index / retrieval · `report.py` report and PDF · `catalogs/` source manifest, C01–C21 coverage map, interview topics and decision table.

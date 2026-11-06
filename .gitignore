@@ -8,11 +8,17 @@ __pycache__/
 .pytest_cache/
 .env.*
 !.env.example
-# source documents (distribution permission not verified) and generated output
-sources/*
-!sources/README.md
-*.pdf
 *.docx
 *.zip
 reports/
 outputs/
+# PDFs are ignored by default; only the listed source documents are tracked
+*.pdf
+sources/*
+!sources/README.md
+!sources/EU_AI_Act_OJ_L_2024_1689.pdf
+!sources/EU_Commission_Decision.pdf
+!sources/TrustAI_Agentic_Governance_Playbook.pdf
+!sources/TrustAI_Governance_Playbook.pdf
+!sources/AI_RMF_Playbook.pdf
+# ISO/IEC 42001 is copyrighted and is intentionally NOT tracked
