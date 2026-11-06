@@ -1,12 +1,10 @@
-# TrustAI Risk Assessment — first prototype
-
-> **Status: first prototype.** Intended for research and feedback. It is not a compliance, certification or legal-opinion tool.
+# TrustAI Risk Assessment — prototype
 
 **Language note:** the application's user interface, interview questions, options, rationales, LLM instructions and generated reports are in **Turkish**. This README, code comments and docstrings are in English.
 
 ## Purpose
-The application chats with a **human** who knows the AI agent being assessed and produces a risk *preliminary assessment* based on **user declarations** (TrustAI labels: LOW / MEDIUM / HIGH / FORBIDDEN, or "assessment could not be completed"; Turkish PDF report).
-It does not communicate with the target agent, run tests or attacks, or request logs, code or evidence; control answers are recorded only as *declarations*. The EU AI Act is the **assessment reference**; legal applicability is a separate field and defaults to "not determined". The operational assessment is based on the TrustAI playbooks and the NIST AI RMF Playbook.
+The application chats with a **human** who knows the AI agent being assessed and produces a risk *preliminary assessment* based on **user declarations** (TrustAI labels: LOW / MEDIUM / HIGH / FORBIDDEN, or "assessment could not be completed").
+Legal applicability is a separate field and defaults to "not determined". The operational assessment is based on the TrustAI playbooks and the NIST AI RMF Playbook.
 
 Stack: Python, Streamlit, OpenAI API (chat + embeddings), local BM25 plus a persistent embedding index.
 
@@ -15,7 +13,7 @@ Stack: Python, Streamlit, OpenAI API (chat + embeddings), local BM25 plus a pers
 git clone <repo-url> && cd <repo-folder>
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env         # put your OPENAI_API_KEY in .env (it is never committed)
+cp .env.example .env         # put your OPENAI_API_KEY in .env 
 ```
 The chat model and embedding model are selected through environment variables: `OPENAI_MODEL` (default `gpt-4.1-mini`) and `OPENAI_EMBED_MODEL` (default `text-embedding-3-small`). Streamlit secrets are also supported.
 
@@ -29,7 +27,7 @@ The source PDFs are **not included** in the repository (distribution permission 
 | `TrustAI_Agentic_Governance_Playbook.pdf` | TrustAI (2026) | From the TrustAI team |
 | `TrustAI_Governance_Playbook.pdf` | TrustAI (v1.0, 2026) | From the TrustAI team |
 | `AI_RMF_Playbook.pdf` | NIST AI RMF Playbook — airc.nist.gov | |
-| `ISO_42001_2023.pdf` | ISO/IEC 42001:2023 | **Optional and not used:** because of copyright it is excluded from the index and prompts; it is listed only as a bibliographic entry |
+| `ISO_42001_2023.pdf` | ISO/IEC 42001:2023 |
 
 Version and date information is in `catalogs/sources.json`. If the files are missing, the application says so and disables the start button. Source texts are treated as data; instructions inside them are not applied.
 
@@ -53,8 +51,7 @@ The target is roughly 10–15 questions, with a hard limit of 20 including follo
 - **Not sufficiently tested with a real model.** The local tests use a scripted fake client; question quality, slot-extraction accuracy and rationale fidelity have not been verified with a real model.
 - **Question flow** (repetition prevention, follow-up, conflict and finishing rules) and the data-consistency fixes were recently reworked and have not been sufficiently validated in real interviews. Repeated or unnecessary questions, or wrongly recorded fields, may occur.
 - **The semantic accuracy of source mappings has not been verified.** Citations are checked only programmatically (passage existence + keyword). The semantic support check is an optional single model call and does not replace human review.
-- **Risk results have not been validated.** The project decision table and the L/I/P assurance profile (`catalogs/policy.json`) are proposed project methods without external validation; results have not been compared with expert assessments.
-- **Currency of the legislation has not been verified.** The analysis relies on the original AI Act text that is loaded; secondary sources report that the high-risk obligation dates were postponed (not confirmed from an official source). This uncertainty is stated in the report.
+
 - C01–C21 is a coverage map; most controls are not asked and remain "not yet assessed". Coverage is not a safety score.
 - The target agent is not technically tested; answers are not verified.
 - No license has been added yet; the code and catalogs are for review before sharing.
